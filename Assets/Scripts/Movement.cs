@@ -9,7 +9,7 @@ public class Movement : MonoBehaviour
 
     private float dirX = 0f;
     [SerializeField] private float moveSpeed = 7f;
-    [SerializeField] private float jumpForce = 14f;
+    [SerializeField] private float jumpForce = 15f;
     // Start is called before the first frame update
     void Start()
     {
