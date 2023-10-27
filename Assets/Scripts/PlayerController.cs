@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Movement : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D rb;
     private SpriteRenderer sprite;
@@ -23,11 +23,11 @@ public class Movement : MonoBehaviour
         dirX = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
 
-        if(Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump"))
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
-        if(dirX > 0)
+        if (dirX > 0)
         {
             sprite.flipX = false;
         }
@@ -35,5 +35,9 @@ public class Movement : MonoBehaviour
         {
             sprite.flipX = true;
         }
+    }
+    public void ResetPlayer()
+    {
+
     }
 }
