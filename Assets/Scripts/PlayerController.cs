@@ -1,54 +1,115 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D rb;
     private SpriteRenderer sprite;
+    private BoxCollider2D boxCollider2D;
 
-    private float dirX = 0f;
-    [SerializeField] private float moveSpeed = 7f;
-    [SerializeField] private float jumpForce = 1200f;
-    // Start is called before the first frame update
+    [Header("Player Configs")]
+    public float jumpForce = 5f;
+    public float delay = 20;
+    public float maxFuel = 50;
+    public LayerMask jumpableGround;
 
-    public GameObject player;
-    public GameObject arrow;
+    private float fuel;
+
+    [Header("Game Objects")]
+    public TextMeshProUGUI jumpText;
+    public TextMeshProUGUI fuelText;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
-        
+        boxCollider2D = GetComponent<BoxCollider2D>();
 
+        fuel = maxFuel; // Set initial fuel to max
     }
 
     // Update is called once per frame
     void Update()
     {
-        rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
-        
+        rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y);
+        fuelText.text = "Fuel: " + fuel.ToString();
+        jumpText.text = "Jump: " + jumpForce.ToString();
 
-        // JumpAction using Mouse Left Click
-        if (Input.GetMouseButton(0))
+        // Drain fuel mid air
+        if (!IsGrounded() && fuel > 0 && rb.velocity.y != 0)
         {
-            //Click to charge
-            jumpForce += 100;
-            if (jumpForce>1800f)
-                jumpForce = 1800f;
+            fuelDrain();
         }
 
-        //Release to jump
-        if (Input.GetMouseButtonUp(0))
+        if (IsGrounded() && fuel >= 0)
         {
-            Jump();
-            //Reset JumpForce after release
-            jumpForce = 1200f;
+            // Refuel after a delay on the ground
+            if (fuel < maxFuel)
+            {
+                if (delay > 0)
+                {
+                    delay -= 0.05f;
+                }
+                if (delay < 0)
+                {
+                    refuel();
+                }
+            }
+
+            // JumpAction using Mouse Left Click
+            if (Input.GetMouseButton(0))
+            {
+                //Click to charge
+                jumpForce += 0.05f;
+                Debug.Log("Charge" + " " + jumpForce);
+                if (jumpForce > 30f)
+                {
+                    jumpForce = 30f;
+                }
+            }
+
+            //Release to jump
+            if (Input.GetMouseButtonUp(0))
+            {
+                if (jumpForce < fuel)
+                {
+                    Jump();
+                }
+                else
+                {
+                    jumpForce = fuel;
+                    Jump();
+                }
+                fuelDrain();
+
+                // Reset JumpForce after release
+                jumpForce = 5f;
+                delay = 20;
+            }
         }
     }
-    public void ResetPlayer()
-    {
 
+    public void fuelDrain()
+    {
+        if (!IsGrounded())
+        {
+            fuel -= 0.05f;
+            if (fuel < 0)
+            {
+                fuel = 0;
+            }
+        }
+        else
+        {
+            fuel -= jumpForce;
+        }
+    }
+
+    public void refuel()
+    {
+        fuel += 0.05f;
     }
 
     public void Jump()
@@ -57,20 +118,32 @@ public class PlayerController : MonoBehaviour
         Vector3 screenPosition = Camera.main.WorldToScreenPoint(transform.position);
         Vector3 mouseDirection = Input.mousePosition - screenPosition;
         mouseDirection.Normalize();
-        rb.AddForce(mouseDirection * jumpForce);
-        Debug.Log(mouseDirection);
-        Debug.Log("Jump");
+        rb.AddForce(-1 * mouseDirection * jumpForce, ForceMode2D.Impulse);
 
-        if(mouseDirection.x < 0){
+        if (mouseDirection.x > 0)
+        {
             sprite.flipX = true;
         }
-        else{
+        else
+        {
             sprite.flipX = false;
         }
     }
 
-    public void flip()
+    public void flip() { }
+
+    public void ResetPlayer() { }
+
+    private bool IsGrounded()
     {
-         
+        RaycastHit2D raycastHit = Physics2D.BoxCast(
+            boxCollider2D.bounds.center,
+            boxCollider2D.bounds.size,
+            0,
+            Vector2.down,
+            0.1f,
+            jumpableGround
+        );
+        return raycastHit.collider != null;
     }
 }
