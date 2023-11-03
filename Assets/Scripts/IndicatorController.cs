@@ -20,6 +20,10 @@ public class IndicatorController : MonoBehaviour
         Vector3 rotation = mousePosition - transform.position;
         float rotationZ = Mathf.Atan2(-rotation.y, -rotation.x) * Mathf.Rad2Deg;
 
-        transform.rotation = Quaternion.Euler(0, 0, rotationZ);
+        // If Mouse is below the player (arrow is above the player)
+        if (rotationZ > 0.05)
+        {
+            transform.rotation = Quaternion.Euler(0, 0, rotationZ);
+        }
     }
 }

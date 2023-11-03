@@ -184,6 +184,9 @@ MonoBehaviour:
     m_Bits: 64
   jumpText: {fileID: 7985390358794302574}
   fuelText: {fileID: 2600553508314522879}
+  customCursor: {fileID: 2800000, guid: 72cf6994cca7ef34385f5c5ce573cdbb, type: 3}
+  maxJumpForce: 30
+  fuelIncrement: 0.05
 --- !u!114 &2643686920815391265
 MonoBehaviour:
   m_ObjectHideFlags: 0

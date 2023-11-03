@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
     private SpriteRenderer sprite;
     private BoxCollider2D boxCollider2D;
 
+    private Vector3 mouseDirection;
+
     [Header("Player Configs")]
     public float jumpForce = 5f;
     public float delay = 20;
@@ -20,6 +22,7 @@ public class PlayerController : MonoBehaviour
     [Header("Game Objects")]
     public TextMeshProUGUI jumpText;
     public TextMeshProUGUI fuelText;
+    public Texture2D customCursor;
 
     [Header("Cheat Config (only change during PlayMode)")]
     [Tooltip("Default Value is 30")]
@@ -45,6 +48,17 @@ public class PlayerController : MonoBehaviour
         rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y);
         fuelText.text = "Fuel: " + fuel.ToString();
         jumpText.text = "Jump: " + jumpForce.ToString();
+
+        // Set Cursor Icon (for debug)
+        mouseDirection = getCursorLocation();
+        if (mouseDirection.y < -0.05)
+        {
+            Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+        }
+        else
+        {
+            Cursor.SetCursor(customCursor, Vector2.zero, CursorMode.Auto);
+        }
 
         // Drain fuel mid air
         if (!IsGrounded() && fuel > 0 && rb.velocity.y != 0)
@@ -123,20 +137,30 @@ public class PlayerController : MonoBehaviour
 
     public void Jump()
     {
+        // If mouse is below the player
+        if (mouseDirection.y < -0.05)
+        {
+            rb.AddForce(-1 * mouseDirection * jumpForce, ForceMode2D.Impulse);
+
+            if (mouseDirection.x > 0)
+            {
+                sprite.flipX = true;
+            }
+            else
+            {
+                sprite.flipX = false;
+            }
+        }
+    }
+
+    private Vector3 getCursorLocation()
+    {
         // Get Mouse Position on Screen
         Vector3 screenPosition = Camera.main.WorldToScreenPoint(transform.position);
         Vector3 mouseDirection = Input.mousePosition - screenPosition;
         mouseDirection.Normalize();
-        rb.AddForce(-1 * mouseDirection * jumpForce, ForceMode2D.Impulse);
 
-        if (mouseDirection.x > 0)
-        {
-            sprite.flipX = true;
-        }
-        else
-        {
-            sprite.flipX = false;
-        }
+        return mouseDirection;
     }
 
     public void flip() { }
