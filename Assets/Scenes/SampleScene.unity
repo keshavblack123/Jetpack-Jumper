@@ -4767,9 +4767,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 738617248}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platforms
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10082,9 +10082,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1371540178}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Floor
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15923,6 +15923,10 @@ PrefabInstance:
     - target: {fileID: 476623104689975673, guid: ea59094e6865c4ea881564962a47c497, type: 3}
       propertyPath: m_Name
       value: Left Staircase
+      objectReference: {fileID: 0}
+    - target: {fileID: 476623104689975673, guid: ea59094e6865c4ea881564962a47c497, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2341276398876340363, guid: ea59094e6865c4ea881564962a47c497, type: 3}
       propertyPath: m_LocalPosition.x
