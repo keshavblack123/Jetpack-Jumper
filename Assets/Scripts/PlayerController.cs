@@ -21,13 +21,22 @@ public class PlayerController : MonoBehaviour
     public TextMeshProUGUI jumpText;
     public TextMeshProUGUI fuelText;
 
+    [Header("Cheat Config (only change during PlayMode)")]
+    [Tooltip("Default Value is 30")]
+    public float maxJumpForce = 30f;
+
+    [Tooltip("Default Value is 0.05")]
+    public float fuelIncrement = 0.05f;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
         boxCollider2D = GetComponent<BoxCollider2D>();
 
-        fuel = maxFuel; // Set initial fuel to max
+        fuel = maxFuel; // Set initial fuel to
+        maxJumpForce = 30f;
+        fuelIncrement = 0.05f;
     }
 
     // Update is called once per frame
@@ -64,9 +73,9 @@ public class PlayerController : MonoBehaviour
                 //Click to charge
                 jumpForce += 0.05f;
                 Debug.Log("Charge" + " " + jumpForce);
-                if (jumpForce > 30f)
+                if (jumpForce > maxJumpForce)
                 {
-                    jumpForce = 30f;
+                    jumpForce = maxJumpForce;
                 }
             }
 
@@ -109,7 +118,7 @@ public class PlayerController : MonoBehaviour
 
     public void refuel()
     {
-        fuel += 0.05f;
+        fuel += fuelIncrement;
     }
 
     public void Jump()
