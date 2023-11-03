@@ -49,23 +49,51 @@ public class PlayerController : MonoBehaviour
         fuelText.text = "Fuel: " + fuel.ToString();
         jumpText.text = "Jump: " + jumpForce.ToString();
 
-        // Set Cursor Icon (for debug)
+        // Jumping Mechanics [no fuel logic inside this]
         mouseDirection = getCursorLocation();
         if (mouseDirection.y < -0.05)
         {
             Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+
+            if (IsGrounded() && fuel >= 0)
+            {
+                // JumpAction using Mouse Left Click
+                if (Input.GetMouseButton(0))
+                {
+                    //Click to charge
+                    jumpForce += 0.05f;
+                    Debug.Log("Charge" + " " + jumpForce);
+                    if (jumpForce > maxJumpForce)
+                    {
+                        jumpForce = maxJumpForce;
+                    }
+                }
+
+                //Release to jump
+                if (Input.GetMouseButtonUp(0))
+                {
+                    if (jumpForce < fuel)
+                    {
+                        Jump();
+                    }
+                    else
+                    {
+                        jumpForce = fuel;
+                        Jump();
+                    }
+
+                    // Reset JumpForce after release
+                    jumpForce = 5f;
+                    delay = 20;
+                }
+            }
         }
         else
         {
             Cursor.SetCursor(customCursor, Vector2.zero, CursorMode.Auto);
         }
 
-        // Drain fuel mid air
-        if (!IsGrounded() && fuel > 0 && rb.velocity.y != 0)
-        {
-            fuelDrain();
-        }
-
+        // Refuel on the ground after a delay
         if (IsGrounded() && fuel >= 0)
         {
             // Refuel after a delay on the ground
@@ -80,37 +108,12 @@ public class PlayerController : MonoBehaviour
                     refuel();
                 }
             }
+        }
 
-            // JumpAction using Mouse Left Click
-            if (Input.GetMouseButton(0))
-            {
-                //Click to charge
-                jumpForce += 0.05f;
-                Debug.Log("Charge" + " " + jumpForce);
-                if (jumpForce > maxJumpForce)
-                {
-                    jumpForce = maxJumpForce;
-                }
-            }
-
-            //Release to jump
-            if (Input.GetMouseButtonUp(0))
-            {
-                if (jumpForce < fuel)
-                {
-                    Jump();
-                }
-                else
-                {
-                    jumpForce = fuel;
-                    Jump();
-                }
-                fuelDrain();
-
-                // Reset JumpForce after release
-                jumpForce = 5f;
-                delay = 20;
-            }
+        // Drain fuel mid air
+        if (!IsGrounded() && fuel > 0 && rb.velocity.y != 0)
+        {
+            fuelDrain();
         }
     }
 
