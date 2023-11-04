@@ -13,11 +13,12 @@ public class PlayerController : MonoBehaviour
 
     [Header("Player Configs")]
     public float jumpForce = 5f;
-    public float delay = 20;
+    public float delayTime = 20;
     public float maxFuel = 50;
     public LayerMask jumpableGround;
 
     private float fuel;
+    private float delay;
 
     [Header("Game Objects")]
     public TextMeshProUGUI jumpText;
@@ -84,7 +85,7 @@ public class PlayerController : MonoBehaviour
 
                     // Reset JumpForce after release
                     jumpForce = 5f;
-                    delay = 20;
+                    delay = delayTime;
                 }
             }
         }
