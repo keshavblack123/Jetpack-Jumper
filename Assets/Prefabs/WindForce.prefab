@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: -1
-  windForce: 0.04
+  windForce: 0.1
   windDuration: 5
   warningDuration: 3
   interval: 10
