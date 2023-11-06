@@ -109,6 +109,7 @@ GameObject:
   - component: {fileID: 1384027636058881404}
   - component: {fileID: 1270445424596721646}
   - component: {fileID: 6123695605613972555}
+  - component: {fileID: 2995683416901047341}
   m_Layer: 6
   m_Name: MovingPlatform
   m_TagString: Ground
@@ -285,3 +286,31 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &2995683416901047341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9207980384360915968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2016610c03329343ae099c538b406ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 31030786eaae7f24bb7552480586c1a3, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1270445424596721646}
+        m_TargetAssemblyTypeName: MovingPlatformController, Assembly-CSharp
+        m_MethodName: ResetPlatform
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

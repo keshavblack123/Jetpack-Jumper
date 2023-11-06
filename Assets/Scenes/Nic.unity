@@ -7976,6 +7976,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 6255098274112705628, guid: f3a21b69250268443bae7fdefcbe33c0, type: 3}
+      propertyPath: fuel
+      value: 
+      objectReference: {fileID: 11400000, guid: 3089af160a9027e4d9522616191969ee, type: 2}
+    - target: {fileID: 6255098274112705628, guid: f3a21b69250268443bae7fdefcbe33c0, type: 3}
       propertyPath: fuelText
       value: 
       objectReference: {fileID: 2600553509400960809}
@@ -7983,6 +7987,14 @@ PrefabInstance:
       propertyPath: jumpText
       value: 
       objectReference: {fileID: 7985390359880765368}
+    - target: {fileID: 6255098274112705628, guid: f3a21b69250268443bae7fdefcbe33c0, type: 3}
+      propertyPath: jumpForce
+      value: 
+      objectReference: {fileID: 11400000, guid: 50935c7acd85fd9488c9f6722bdd9dfa, type: 2}
+    - target: {fileID: 6255098274112705628, guid: f3a21b69250268443bae7fdefcbe33c0, type: 3}
+      propertyPath: gameConstants
+      value: 
+      objectReference: {fileID: 11400000, guid: d8f22cdab1547be40a3f4a20fd0fa9ce, type: 2}
     - target: {fileID: 7896665330391910466, guid: f3a21b69250268443bae7fdefcbe33c0, type: 3}
       propertyPath: m_Name
       value: Player2.0
@@ -8619,6 +8631,7 @@ GameObject:
   - component: {fileID: 7573752077914429164}
   - component: {fileID: 8761588153576116373}
   - component: {fileID: 5204334925142541468}
+  - component: {fileID: 8761588153576116374}
   m_Layer: 5
   m_Name: Time
   m_TagString: Untagged
@@ -8638,6 +8651,7 @@ GameObject:
   - component: {fileID: 5689979367819043927}
   - component: {fileID: 3691773625159871991}
   - component: {fileID: 7491735407343927318}
+  - component: {fileID: 8440365324249370052}
   m_Layer: 5
   m_Name: Resource UI
   m_TagString: Untagged
@@ -9127,6 +9141,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &8440365324249370052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6708544907003844041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f15b02062cc218b4d93c1f648112f755, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuel: {fileID: 11400000, guid: 3089af160a9027e4d9522616191969ee, type: 2}
+  jumpForce: {fileID: 11400000, guid: 50935c7acd85fd9488c9f6722bdd9dfa, type: 2}
+  jumpText: {fileID: 7985390359880765368}
+  fuelText: {fileID: 2600553509400960809}
 --- !u!114 &8644348295513671304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9228,6 +9258,34 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &8761588153576116374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6401800347666477821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2016610c03329343ae099c538b406ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 31030786eaae7f24bb7552480586c1a3, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5204334925142541468}
+        m_TargetAssemblyTypeName: TimerController, Assembly-CSharp
+        m_MethodName: ResetTimer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!20 &8798594905521315402
 Camera:
   m_ObjectHideFlags: 0

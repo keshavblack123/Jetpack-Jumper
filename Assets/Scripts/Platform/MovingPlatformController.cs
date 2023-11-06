@@ -6,8 +6,12 @@ public class MovingPlatformController : MonoBehaviour
 {
     public GameObject[] waypoints;
     private int currentWaypointIndex = 0;
-
     public float speed = 2f;
+    Vector3 parentStartingPosition;
+    void Start()
+    {
+        parentStartingPosition = transform.parent.position;
+    }
 
     // Update is called once per frame
     private void Update()
@@ -48,6 +52,7 @@ public class MovingPlatformController : MonoBehaviour
 
     public void ResetPlatform()
     {
-        this.transform.localPosition = new Vector3(0, 0, 0);
+        transform.localPosition = new Vector3(0, 0, 0);
+        transform.parent.position = parentStartingPosition;
     }
 }
