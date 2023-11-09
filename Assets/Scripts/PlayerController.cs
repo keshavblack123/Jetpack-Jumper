@@ -31,7 +31,11 @@ public class PlayerController : MonoBehaviour
 
     [Tooltip("Default Value is 0.05")]
     public float fuelIncrement = 0.05f;
+
+    [Tooltip("Default Value is 30")]
+    public float dragValue = 30f;
     Vector3 startingPosition;
+
     void Start()
     {
         jumpForce.SetValue(gameConstants.startingJumpForce);
@@ -48,6 +52,7 @@ public class PlayerController : MonoBehaviour
         fuel.SetValue(maxFuel);
         maxJumpForce = 30f;
         fuelIncrement = 0.05f;
+        dragValue = 30f;
     }
 
     // Update is called once per frame
@@ -59,6 +64,23 @@ public class PlayerController : MonoBehaviour
 
         // Jumping Mechanics [no fuel logic inside this]
         mouseDirection = getCursorLocation();
+
+        //Temp Fix to prevent sliding
+        if (IsGrounded())
+        {
+            if (!Input.GetMouseButton(0))
+            {
+                rb.drag = dragValue;
+            }
+            else
+            {
+                rb.drag = 0f;
+            }
+        }
+        else
+        {
+            rb.drag = 0f;
+        }
         if (mouseDirection.y < -0.05)
         {
             Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
@@ -123,6 +145,7 @@ public class PlayerController : MonoBehaviour
             fuelDrain();
         }
     }
+
     public void fuelDrain()
     {
         if (!IsGrounded())
@@ -138,10 +161,12 @@ public class PlayerController : MonoBehaviour
             fuel.ApplyChange(-jumpForce.Value);
         }
     }
+
     public void refuel()
     {
         fuel.ApplyChange(fuelIncrement);
     }
+
     public void Jump()
     {
         // If mouse is below the player
@@ -159,6 +184,7 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+
     private Vector3 getCursorLocation()
     {
         // Get Mouse Position on Screen
