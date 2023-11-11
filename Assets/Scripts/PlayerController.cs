@@ -29,8 +29,8 @@ public class PlayerController : MonoBehaviour
     [Tooltip("Default Value is 30")]
     public float maxJumpForce = 30f;
 
-    [Tooltip("Default Value is 0.05")]
-    public float fuelIncrement = 0.05f;
+    [Tooltip("Default Value is 0.1")]
+    public float fuelIncrement = 0.1f;
 
     [Tooltip("Default Value is 30")]
     public float dragValue = 30f;
@@ -85,38 +85,63 @@ public class PlayerController : MonoBehaviour
         {
             Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
 
-            if (IsGrounded() && fuel.Value >= 0)
+            if (fuel.Value >= 0)
             {
                 // JumpAction using Mouse Left Click
                 if (Input.GetMouseButton(0))
                 {
+                    if(IsGrounded())
+                    {
                     //Click to charge
-                    jumpForce.Value += 0.05f;
+                    jumpForce.Value += 0.1f;
                     // Debug.Log("Charge" + " " + jumpForce);
                     if (jumpForce.Value > maxJumpForce)
                     {
                         jumpForce.SetValue(maxJumpForce);
                     }
-                }
+                    }
 
-                //Release to jump
-                if (Input.GetMouseButtonUp(0))
+                    else 
+                    {
+                        // Freeze player when mouse click down when in air 
+                        // as long as fuel >0
+                        rb.velocity = Vector3.zero;
+                        rb.constraints = RigidbodyConstraints2D.FreezePosition;
+                        fuelDrain(0.1f);
+                        jumpForce.Value += 0.1f;
+    
+                    }
+                }
+            }
+            //Release to jump
+            if (Input.GetMouseButtonUp(0))
+            {
+                if(floatState())
+                {
+                    Jump();
+                }
+                else 
                 {
                     if (jumpForce.Value < fuel.Value)
                     {
                         Jump();
-                    }
+                        fuelDrain(jumpForce.Value);        
+                    }                    
                     else
                     {
-                        jumpForce.SetValue(fuel.Value);
+                        jumpForce.SetValue(maxJumpForce);
+                        fuelDrain(fuel.Value);
                         Jump();
                     }
+                }
 
                     // Reset JumpForce after release
-                    jumpForce.SetValue(5f);
-                    delay = delayTime;
-                }
+                jumpForce.SetValue(5f);
+                delay = delayTime;
             }
+            
+                
+    
         }
         else
         {
@@ -130,7 +155,7 @@ public class PlayerController : MonoBehaviour
             {
                 if (delay > 0)
                 {
-                    delay -= 0.05f;
+                    delay -= 0.1f;
                 }
                 if (delay < 0)
                 {
@@ -139,27 +164,21 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        // Drain fuel mid air
-        if (!IsGrounded() && fuel.Value > 0 && rb.velocity.y != 0)
-        {
-            fuelDrain();
-        }
+        // // Drain fuel mid air
+        // if (!IsGrounded() && fuel.Value > 0 && rb.velocity.y != 0)
+        // {
+        //     fuelDrain();
+        // }
     }
 
-    public void fuelDrain()
+    public void fuelDrain(float drainValue)
     {
-        if (!IsGrounded())
+        
+        if(drainValue <= 50)
         {
-            fuel.ApplyChange(-0.05f);
-            if (fuel.Value < 0)
-            {
-                fuel.SetValue(0);
-            }
+            fuel.ApplyChange(-drainValue);
         }
-        else
-        {
-            fuel.ApplyChange(-jumpForce.Value);
-        }
+        
     }
 
     public void refuel()
@@ -169,9 +188,14 @@ public class PlayerController : MonoBehaviour
 
     public void Jump()
     {
+        
         // If mouse is below the player
         if (mouseDirection.y < -0.05)
         {
+            Debug.Log("Jump");
+            //Unfreeze player Set back rotation constraint
+            rb.constraints = RigidbodyConstraints2D.None;
+            rb.constraints = RigidbodyConstraints2D.FreezeRotation;
             rb.AddForce(-1 * mouseDirection * jumpForce.Value, ForceMode2D.Impulse);
 
             if (mouseDirection.x > 0)
@@ -195,14 +219,18 @@ public class PlayerController : MonoBehaviour
         return mouseDirection;
     }
 
-    public void flip() { }
-
     public void ResetPlayer()
     {
         transform.position = startingPosition;
         fuel.SetValue(gameConstants.startingFuel);
         jumpForce.SetValue(gameConstants.startingJumpForce);
     }
+
+    // public void fall()
+    // {
+    //     rb.constraints = RigidbodyConstraints2D.None;
+    //     rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+    // }
 
     private bool IsGrounded()
     {
@@ -216,4 +244,19 @@ public class PlayerController : MonoBehaviour
         );
         return raycastHit.collider != null;
     }
+
+
+    private bool floatState()
+    {
+        if(!IsGrounded() && rb.velocity.magnitude == 0 && Input.GetMouseButton(0))
+        {
+            return true;
+        }
+
+        else
+        {
+            return false;
+        }
+    }
+
 }
