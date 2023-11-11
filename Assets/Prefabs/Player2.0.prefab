@@ -259,17 +259,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afeb51a2e3798427f87c5a1ccc934ac7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 14
-  delayTime: 20
-  maxFuel: 50
-  jumpableGround:
-    serializedVersion: 2
-    m_Bits: 64
-  jumpText: {fileID: 0}
-  fuelText: {fileID: 0}
+  gameConstants: {fileID: 0}
+  fuel: {fileID: 0}
+  jumpForce: {fileID: 0}
   customCursor: {fileID: 2800000, guid: 72cf6994cca7ef34385f5c5ce573cdbb, type: 3}
+  groundParticlePrefab: {fileID: 1758741067633491097, guid: b1d4fb5a55dfa4b4993410227b9a2456, type: 3}
   maxJumpForce: 30
   fuelIncrement: 0.05
+  dragValue: 30
 --- !u!114 &8215496528657552839
 MonoBehaviour:
   m_ObjectHideFlags: 0

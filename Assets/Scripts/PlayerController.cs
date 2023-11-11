@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEditor.Timeline;
+using Unity.Mathematics;
 
 public class PlayerController : MonoBehaviour
 {
@@ -24,6 +26,7 @@ public class PlayerController : MonoBehaviour
     // public TextMeshProUGUI jumpText;
     // public TextMeshProUGUI fuelText;
     public Texture2D customCursor;
+    public GameObject groundParticlePrefab;
 
     [Header("Cheat Config (only change during PlayMode)")]
     [Tooltip("Default Value is 30")]
@@ -90,43 +93,41 @@ public class PlayerController : MonoBehaviour
                 // JumpAction using Mouse Left Click
                 if (Input.GetMouseButton(0))
                 {
-                    if(IsGrounded())
+                    if (IsGrounded())
                     {
-                    //Click to charge
-                    jumpForce.Value += 0.1f;
-                    // Debug.Log("Charge" + " " + jumpForce);
-                    if (jumpForce.Value > maxJumpForce)
-                    {
-                        jumpForce.SetValue(maxJumpForce);
+                        //Click to charge
+                        jumpForce.Value += 0.1f;
+                        // Debug.Log("Charge" + " " + jumpForce);
+                        if (jumpForce.Value > maxJumpForce)
+                        {
+                            jumpForce.SetValue(maxJumpForce);
+                        }
                     }
-                    }
-
-                    else 
+                    else
                     {
-                        // Freeze player when mouse click down when in air 
+                        // Freeze player when mouse click down when in air
                         // as long as fuel >0
                         rb.velocity = Vector3.zero;
                         rb.constraints = RigidbodyConstraints2D.FreezePosition;
                         fuelDrain(0.1f);
                         jumpForce.Value += 0.1f;
-    
                     }
                 }
             }
             //Release to jump
             if (Input.GetMouseButtonUp(0))
             {
-                if(floatState())
+                if (floatState())
                 {
                     Jump();
                 }
-                else 
+                else
                 {
                     if (jumpForce.Value < fuel.Value)
                     {
                         Jump();
-                        fuelDrain(jumpForce.Value);        
-                    }                    
+                        fuelDrain(jumpForce.Value);
+                    }
                     else
                     {
                         jumpForce.SetValue(maxJumpForce);
@@ -135,13 +136,10 @@ public class PlayerController : MonoBehaviour
                     }
                 }
 
-                    // Reset JumpForce after release
+                // Reset JumpForce after release
                 jumpForce.SetValue(5f);
                 delay = delayTime;
             }
-            
-                
-    
         }
         else
         {
@@ -173,12 +171,10 @@ public class PlayerController : MonoBehaviour
 
     public void fuelDrain(float drainValue)
     {
-        
-        if(drainValue <= 50)
+        if (drainValue <= 50)
         {
             fuel.ApplyChange(-drainValue);
         }
-        
     }
 
     public void refuel()
@@ -188,7 +184,6 @@ public class PlayerController : MonoBehaviour
 
     public void Jump()
     {
-        
         // If mouse is below the player
         if (mouseDirection.y < -0.05)
         {
@@ -245,18 +240,41 @@ public class PlayerController : MonoBehaviour
         return raycastHit.collider != null;
     }
 
-
     private bool floatState()
     {
-        if(!IsGrounded() && rb.velocity.magnitude == 0 && Input.GetMouseButton(0))
+        if (!IsGrounded() && rb.velocity.magnitude == 0 && Input.GetMouseButton(0))
         {
             return true;
         }
-
         else
         {
             return false;
         }
     }
 
+    private void spawnGroundParticles()
+    {
+        GameObject instantiatedPrefab = Instantiate(groundParticlePrefab);
+        Vector3 gameObjectSize = GetComponent<Renderer>().bounds.size;
+        instantiatedPrefab.transform.position =
+            transform.position - new Vector3(0, gameObjectSize.y / 2, 0);
+        ;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.contacts.Length > 0)
+        {
+            ContactPoint2D contact = collision.GetContact(0);
+
+            // Collision is at the bottom
+            if (
+                contact.normal == Vector2.up
+                && collision.gameObject.layer == LayerMask.NameToLayer("Ground")
+            )
+            {
+                spawnGroundParticles();
+            }
+        }
+    }
 }
