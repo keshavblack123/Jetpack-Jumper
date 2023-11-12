@@ -19,6 +19,10 @@ public class PlayerController : MonoBehaviour
     float delayTime;
     float maxFuel;
     LayerMask jumpableGround;
+    AudioSource playerAudio;
+    public AudioClip jumpSound;
+    public AudioClip landOnPlatformSound;
+    public AudioClip hitSideWall;
 
     private float delay;
 
@@ -51,6 +55,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
         boxCollider2D = GetComponent<BoxCollider2D>();
+        playerAudio = GetComponent<AudioSource>();
 
         fuel.SetValue(maxFuel);
         maxJumpForce = 30f;
@@ -117,6 +122,8 @@ public class PlayerController : MonoBehaviour
             //Release to jump
             if (Input.GetMouseButtonUp(0))
             {
+                //Play jump audio here
+                playerAudio.PlayOneShot(jumpSound);
                 if (floatState())
                 {
                     Jump();
@@ -274,7 +281,14 @@ public class PlayerController : MonoBehaviour
             )
             {
                 spawnGroundParticles();
+                // Play land on platform sound
+                playerAudio.PlayOneShot(landOnPlatformSound);
             }
         }
+        if (collision.gameObject.CompareTag("Limits"))
+        {
+            playerAudio.PlayOneShot(hitSideWall);
+        }
+
     }
 }
