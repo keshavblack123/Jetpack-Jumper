@@ -69,10 +69,6 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y);
-        // fuelText.text = "Fuel: " + fuel.ToString();
-        // jumpText.text = "Jump: " + jumpForce.ToString();
-
-        // Jumping Mechanics [no fuel logic inside this]
         mouseDirection = getCursorLocation();
 
         //Temp Fix to prevent sliding
@@ -128,7 +124,6 @@ public class PlayerController : MonoBehaviour
                                 jumpForce.Value = maxJumpForce;
                                 fuelDrain(maxJumpForce);
                             }
-                            Debug.Log("Double jump " + jumpForce.Value + " " + fuel.Value);
                             Jump();
                             jumpForce.SetValue(5f);
                             delay = delayTime;
@@ -155,7 +150,7 @@ public class PlayerController : MonoBehaviour
                 }
                 else
                 {
-                    jumpForce.SetValue(maxJumpForce);
+                    jumpForce.SetValue(fuel.Value);
                     fuelDrain(fuel.Value);
                     Jump();
                 }
