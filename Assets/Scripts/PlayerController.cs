@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEditor.Timeline;
 using Unity.Mathematics;
+using System.Data.Common;
 
 public class PlayerController : MonoBehaviour
 {
@@ -42,6 +43,7 @@ public class PlayerController : MonoBehaviour
     [Tooltip("Default Value is 30")]
     public float dragValue = 30f;
     Vector3 startingPosition;
+    private bool canDoubleJump = true;
 
     void Start()
     {
@@ -76,6 +78,7 @@ public class PlayerController : MonoBehaviour
         //Temp Fix to prevent sliding
         if (IsGrounded())
         {
+            canDoubleJump = true;
             if (!Input.GetMouseButton(0))
             {
                 rb.drag = dragValue;
@@ -110,39 +113,52 @@ public class PlayerController : MonoBehaviour
                     }
                     else
                     {
-                        // Freeze player when mouse click down when in air
-                        // as long as fuel >0
-                        rb.velocity = Vector3.zero;
-                        rb.constraints = RigidbodyConstraints2D.FreezePosition;
-                        fuelDrain(0.1f);
-                        jumpForce.Value += 0.1f;
+                        // if canDoubleJump, jump where mouse is (use all maxJumpForce fuel)
+                        if (canDoubleJump && !IsGrounded() && Input.GetMouseButton(0))
+                        {
+                            //Play jump audio here
+                            playerAudio.PlayOneShot(jumpSound);
+                            if (fuel.Value < maxJumpForce)
+                            {
+                                jumpForce.Value = fuel.Value;
+                                fuelDrain(jumpForce.Value);
+                            }
+                            else
+                            {
+                                jumpForce.Value = maxJumpForce;
+                                fuelDrain(maxJumpForce);
+                            }
+                            Debug.Log("Double jump " + jumpForce.Value + " " + fuel.Value);
+                            Jump();
+                            jumpForce.SetValue(5f);
+                            delay = delayTime;
+                            canDoubleJump = false;
+                        }
+                        // // Freeze player when mouse click down when in air
+                        // // as long as fuel >0
+                        // rb.velocity = Vector3.zero;
+                        // rb.constraints = RigidbodyConstraints2D.FreezePosition;
+                        // fuelDrain(0.1f);
+                        // jumpForce.Value += 0.1f;
                     }
                 }
             }
             //Release to jump
-            if (Input.GetMouseButtonUp(0))
+            if (Input.GetMouseButtonUp(0) && IsGrounded())
             {
                 //Play jump audio here
                 playerAudio.PlayOneShot(jumpSound);
-                if (floatState())
+                if (jumpForce.Value < fuel.Value)
                 {
                     Jump();
+                    fuelDrain(jumpForce.Value);
                 }
                 else
                 {
-                    if (jumpForce.Value < fuel.Value)
-                    {
-                        Jump();
-                        fuelDrain(jumpForce.Value);
-                    }
-                    else
-                    {
-                        jumpForce.SetValue(maxJumpForce);
-                        fuelDrain(fuel.Value);
-                        Jump();
-                    }
+                    jumpForce.SetValue(maxJumpForce);
+                    fuelDrain(fuel.Value);
+                    Jump();
                 }
-
                 // Reset JumpForce after release
                 jumpForce.SetValue(5f);
                 delay = delayTime;
@@ -194,7 +210,7 @@ public class PlayerController : MonoBehaviour
         // If mouse is below the player
         if (mouseDirection.y < -0.05)
         {
-            Debug.Log("Jump");
+            // Debug.Log("Jump");
             //Unfreeze player Set back rotation constraint
             rb.constraints = RigidbodyConstraints2D.None;
             rb.constraints = RigidbodyConstraints2D.FreezeRotation;
