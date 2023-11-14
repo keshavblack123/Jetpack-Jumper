@@ -235,7 +235,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.040023565, y: -0.18076718}
+  m_Offset: {x: -0.051847696, y: -0.18076718}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -246,7 +246,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.1630778, y: 1.5620744}
+  m_Size: {x: 0.60341024, y: 1.5620744}
   m_EdgeRadius: 0
 --- !u!114 &6255098274112705628
 MonoBehaviour:
@@ -269,7 +269,6 @@ MonoBehaviour:
   customCursor: {fileID: 2800000, guid: 72cf6994cca7ef34385f5c5ce573cdbb, type: 3}
   groundParticlePrefab: {fileID: 1758741067633491097, guid: b1d4fb5a55dfa4b4993410227b9a2456, type: 3}
   maxJumpForce: 30
-  fuelIncrement: 0.05
   dragValue: 30
 --- !u!114 &8215496528657552839
 MonoBehaviour:
