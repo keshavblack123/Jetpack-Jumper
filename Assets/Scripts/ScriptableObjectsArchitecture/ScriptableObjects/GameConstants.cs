@@ -9,5 +9,6 @@ public class GameConstants : ScriptableObject
     public float delayTime = 10;
     public float maxFuel = 50;
     public LayerMask jumpableGround;
+    public float fuelIncrement = .1f;
 
 }

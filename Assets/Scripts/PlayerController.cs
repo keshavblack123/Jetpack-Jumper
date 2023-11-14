@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour
     public float maxJumpForce = 30f;
 
     [Tooltip("Default Value is 0.1")]
-    public float fuelIncrement = 0.1f;
+    private float fuelIncrement;
 
     [Tooltip("Default Value is 30")]
     public float dragValue = 30f;
@@ -51,6 +51,7 @@ public class PlayerController : MonoBehaviour
         delayTime = gameConstants.delayTime;
         maxFuel = gameConstants.maxFuel;
         jumpableGround = gameConstants.jumpableGround;
+        fuelIncrement = gameConstants.fuelIncrement;
 
         startingPosition = transform.position;
 
@@ -61,7 +62,7 @@ public class PlayerController : MonoBehaviour
 
         fuel.SetValue(maxFuel);
         maxJumpForce = 30f;
-        fuelIncrement = 0.05f;
+        // fuelIncrement = 0.05f;
         dragValue = 30f;
     }
 
@@ -114,15 +115,15 @@ public class PlayerController : MonoBehaviour
                         {
                             //Play jump audio here
                             playerAudio.PlayOneShot(jumpSound);
-                            if (fuel.Value < maxJumpForce)
+                            if (fuel.Value < 20f)
                             {
                                 jumpForce.Value = fuel.Value;
                                 fuelDrain(jumpForce.Value);
                             }
                             else
                             {
-                                jumpForce.Value = maxJumpForce;
-                                fuelDrain(maxJumpForce);
+                                jumpForce.Value = 20f;
+                                fuelDrain(jumpForce.Value);
                             }
                             Jump();
                             jumpForce.SetValue(5f);
