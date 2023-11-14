@@ -1,5 +1,6 @@
 using UnityEngine;
 using DG.Tweening;
+using System;
 
 public class CameraController : MonoBehaviour
 {
@@ -41,6 +42,8 @@ public class CameraController : MonoBehaviour
     void Update()
     {
         Vector3 targetPosition = player.position + offset;
+        targetPosition.y = Mathf.Clamp(targetPosition.y, 5f, Mathf.Infinity);
+
         transform.position = Vector3.SmoothDamp(
             transform.position,
             targetPosition,
