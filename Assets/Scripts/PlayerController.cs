@@ -203,6 +203,9 @@ public class PlayerController : MonoBehaviour
 
     public void Jump()
     {
+        // Fix Moving Platform Bug
+        transform.SetParent(null);
+
         // If mouse is below the player
         if (mouseDirection.y < -0.05)
         {
@@ -301,6 +304,5 @@ public class PlayerController : MonoBehaviour
         {
             playerAudio.PlayOneShot(hitSideWall);
         }
-
     }
 }
