@@ -11,7 +11,8 @@ public class AnimationManager : MonoBehaviour
     {
         idle,
         jump,
-        fall
+        fall,
+        charge
     };
 
     // Start is called before the first frame update
@@ -34,7 +35,11 @@ public class AnimationManager : MonoBehaviour
         state = MovementState.idle;
         
 
-        if (rb.velocity.y > 0.1f)
+        if(state == MovementState.idle && Input.GetMouseButton(0))
+        {
+            state = MovementState.charge;
+        }
+        else if (rb.velocity.y > 0.1f)
         {
             state = MovementState.jump;
         }
@@ -42,6 +47,11 @@ public class AnimationManager : MonoBehaviour
         {
             state = MovementState.fall;
         }
+        
+
         playerAnimation.SetInteger("state", (int)state);
+
+
+     
     }
 }

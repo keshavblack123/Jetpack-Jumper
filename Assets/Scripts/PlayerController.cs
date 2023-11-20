@@ -130,8 +130,8 @@ public class PlayerController : MonoBehaviour
                             delay = delayTime;
                             canDoubleJump = false;
                         }
-                        // // Freeze player when mouse click down when in air
-                        // // as long as fuel >0
+                        // Freeze player when mouse click down when in air
+                        // as long as fuel >0
                         // rb.velocity = Vector3.zero;
                         // rb.constraints = RigidbodyConstraints2D.FreezePosition;
                         // fuelDrain(0.1f);
@@ -249,7 +249,7 @@ public class PlayerController : MonoBehaviour
     //     rb.constraints = RigidbodyConstraints2D.FreezeRotation;
     // }
 
-    private bool IsGrounded()
+    public bool IsGrounded()
     {
         RaycastHit2D raycastHit = Physics2D.BoxCast(
             boxCollider2D.bounds.center,
@@ -262,17 +262,17 @@ public class PlayerController : MonoBehaviour
         return raycastHit.collider != null;
     }
 
-    private bool floatState()
-    {
-        if (!IsGrounded() && rb.velocity.magnitude == 0 && Input.GetMouseButton(0))
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
+    // private bool floatState()
+    // {
+    //     if (!IsGrounded() && rb.velocity.magnitude == 0 && Input.GetMouseButton(0))
+    //     {
+    //         return true;
+    //     }
+    //     else
+    //     {
+    //         return false;
+    //     }
+    // }
 
     private void spawnGroundParticles()
     {
