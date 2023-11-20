@@ -1696,6 +1696,7 @@ MonoBehaviour:
   jumpForce: {fileID: 11400000, guid: 50935c7acd85fd9488c9f6722bdd9dfa, type: 2}
   offset: {x: -8.87, y: -4.62, z: 0}
   screenPosition: {x: 0, y: 0}
+  minY: -141
 --- !u!4 &727205785 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5274180876476843740, guid: c089070aafd62af4eb0e8dce74915fa4, type: 3}
