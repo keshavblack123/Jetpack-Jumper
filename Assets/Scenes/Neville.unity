@@ -2966,6 +2966,7 @@ GameObject:
   - component: {fileID: 1053845760}
   - component: {fileID: 1053845761}
   - component: {fileID: 1053845762}
+  - component: {fileID: 1053845763}
   m_Layer: 0
   m_Name: Sky
   m_TagString: Untagged
@@ -3060,7 +3061,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 1.5081711
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -3136,6 +3137,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1053845763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1053845759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af8233e4030204019a4002e0c1471c33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1063165426 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5274180876476843740, guid: 05328c5ded61f6e4f8ce0bff8001c148, type: 3}
