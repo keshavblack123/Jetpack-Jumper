@@ -74,7 +74,7 @@ public class PlayerController : MonoBehaviour
         mouseDirection = getCursorLocation();
 
         //Temp Fix to prevent sliding
-        if (IsGroundedX())
+        if (IsGrounded)
         {
             canDoubleJump = true;
             if (!Input.GetMouseButton(0))
@@ -99,7 +99,7 @@ public class PlayerController : MonoBehaviour
                 // JumpAction using Mouse Left Click
                 if (Input.GetMouseButton(0))
                 {
-                    if (IsGroundedX())
+                    if (IsGrounded)
                     {
                         //Click to charge
                         jumpForce.Value += 0.1f * Time.deltaTime * 600;
@@ -112,7 +112,7 @@ public class PlayerController : MonoBehaviour
                     else
                     {
                         // if canDoubleJump, jump where mouse is (use all maxJumpForce fuel)
-                        if (canDoubleJump && !IsGroundedX() && Input.GetMouseButton(0))
+                        if (canDoubleJump && !IsGrounded && Input.GetMouseButton(0))
                         {
                             //Play jump audio here
                             playerAudio.PlayOneShot(jumpSound);
@@ -134,7 +134,7 @@ public class PlayerController : MonoBehaviour
                     }
                 }
                 //Release to jump
-                if (Input.GetMouseButtonUp(0) && IsGroundedX())
+                if (Input.GetMouseButtonUp(0) && IsGrounded)
                 {
                     // Fix Moving Platform Bug
                     transform.SetParent(null);
@@ -161,7 +161,7 @@ public class PlayerController : MonoBehaviour
                 Cursor.SetCursor(customCursor, Vector2.zero, CursorMode.Auto);
             }
             // Refuel on the ground after a delay
-            if (IsGroundedX() && fuel.Value >= 0)
+            if (IsGrounded && fuel.Value >= 0)
             {
                 // Refuel after a delay on the ground
                 if (fuel.Value < maxFuel)
@@ -231,18 +231,18 @@ public class PlayerController : MonoBehaviour
         jumpForce.SetValue(gameConstants.startingJumpForce);
     }
 
-    public bool IsGroundedX()
-    {
-        RaycastHit2D raycastHit = Physics2D.BoxCast(
-            boxCollider2D.bounds.center,
-            boxCollider2D.bounds.size,
-            0,
-            Vector2.down,
-            0.1f,
-            jumpableGround
-        );
-        return raycastHit.collider != null;
-    }
+    // public bool IsGrounded()
+    // {
+    //     RaycastHit2D raycastHit = Physics2D.BoxCast(
+    //         boxCollider2D.bounds.center,
+    //         boxCollider2D.bounds.size,
+    //         0,
+    //         Vector2.down,
+    //         0.1f,
+    //         jumpableGround
+    //     );
+    //     return raycastHit.collider != null;
+    // }
 
     private void spawnGroundParticles()
     {
