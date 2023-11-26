@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 56fe8d9a3f2461b4480a510d5b3251fb
+guid: 7b78c468e0dc0434b93e31bc19628fd9
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,578 +110,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: houseplant1
+      name: metal floating platform
       rect:
         serializedVersion: 2
-        x: 144
-        y: 389
-        width: 15
-        height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 013dce9f135e0bb41a6285259a06c05b
-      internalID: -307884683
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: houseplant2
-      rect:
-        serializedVersion: 2
-        x: 165
-        y: 389
-        width: 15
-        height: 33
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1fdf6d264e9e9a44cbe6d8b7be8687ae
-      internalID: 867525902
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: small_tree1
-      rect:
-        serializedVersion: 2
-        x: 104
-        y: 208
-        width: 7
-        height: 19
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 76abe245604e5fe4a9e4f39ad2abf0ae
-      internalID: 815724810
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: plant1
-      rect:
-        serializedVersion: 2
-        x: 118
-        y: 208
-        width: 7
-        height: 17
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4e53399a987868344868fdbc46c9f9e3
-      internalID: -1598235459
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: decorative sprites_0
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 212
-        width: 1
-        height: 1
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 587934b0930dd64489af470cd3f6391c
-      internalID: 300030141
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: plant2
-      rect:
-        serializedVersion: 2
-        x: 130
-        y: 208
-        width: 13
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7bfb364a6ac01824da6ab1e72dd923cd
-      internalID: 532759174
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tree1
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 165
-        width: 17
-        height: 23
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 00f00abeaffddf3448032a70ab0a81a2
-      internalID: -173668860
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tree2
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 165
-        width: 16
-        height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7086ab7b5dc5cd944ad54160884d3bae
-      internalID: 221736290
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tree3
-      rect:
-        serializedVersion: 2
-        x: 54
-        y: 165
-        width: 20
-        height: 23
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5dec5b5f6cd674243af35a961a85e49a
-      internalID: -1167641015
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tree4
-      rect:
-        serializedVersion: 2
-        x: 81
-        y: 165
-        width: 19
-        height: 25
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 707dc5417ad10834781021efd28f9d1c
-      internalID: 1278859234
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tree5
-      rect:
-        serializedVersion: 2
-        x: 107
-        y: 165
-        width: 19
-        height: 25
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d566e805fd108c34db5df8fbe5d62e7f
-      internalID: 1868175913
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tree6
-      rect:
-        serializedVersion: 2
-        x: 133
-        y: 165
-        width: 26
-        height: 35
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2ce8660a621677e4ca8ec0f1e523583f
-      internalID: 2138908606
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pipe_plant1
-      rect:
-        serializedVersion: 2
-        x: 177
-        y: 197
-        width: 30
-        height: 25
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6bc7598a711af334d9632f0ca06a2dc5
-      internalID: -1423724958
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: alien_building1
-      rect:
-        serializedVersion: 2
-        x: 10
-        y: 203
-        width: 45
-        height: 66
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e72048aed1a1b5247a0603dc862d17ca
-      internalID: -1013688240
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: alien_building2
-      rect:
-        serializedVersion: 2
-        x: 69
-        y: 236
-        width: 24
-        height: 39
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8ace6fbe07b50ee44b254bd61c02fe3f
-      internalID: -1341518339
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: alien_building3
-      rect:
-        serializedVersion: 2
-        x: 65
-        y: 207
-        width: 32
-        height: 17
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dd9255d7028891149901f4a716936468
-      internalID: -1723641779
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: alien_plant1
-      rect:
-        serializedVersion: 2
-        x: 183
-        y: 236
-        width: 18
-        height: 47
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fd0c37cc3c9e72a419420227a33ac16c
-      internalID: -1610333193
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: building1
-      rect:
-        serializedVersion: 2
-        x: 161
-        y: 437
-        width: 65
-        height: 60
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c1d9f42d52958fa4aa825504178b053c
-      internalID: 1855899874
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: building2
-      rect:
-        serializedVersion: 2
-        x: 232
-        y: 453
-        width: 96
-        height: 44
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 95486c8877bebc546b6ba0d0b47b63ef
-      internalID: 1515142151
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: gate1
-      rect:
-        serializedVersion: 2
-        x: 331
-        y: 454
-        width: 45
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 21dd4f5b4527c3040aa5cf8ade28a209
-      internalID: 1230110115
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cabinet1
-      rect:
-        serializedVersion: 2
-        x: 11
-        y: 284
-        width: 43
-        height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 797c43c84b6ebba45b685f6911db90b5
-      internalID: -2080652033
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cabinet2
-      rect:
-        serializedVersion: 2
-        x: 61
-        y: 284
-        width: 36
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1df9878d02d5f24449fb9324356f2c75
-      internalID: 958271866
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: trashbin
-      rect:
-        serializedVersion: 2
-        x: 9
-        y: 325
-        width: 41
-        height: 37
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 252f7e37e1ae01b4bb34df6972b54ebd
-      internalID: -703221964
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: drain
-      rect:
-        serializedVersion: 2
-        x: 60
-        y: 325
-        width: 35
-        height: 29
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b44438fd1d1e3f54f966228d895e878f
-      internalID: -2065830691
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pot
-      rect:
-        serializedVersion: 2
-        x: 231
-        y: 303
-        width: 34
-        height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 85b842bd29adadd4c9d1b9df3c3c960a
-      internalID: 747535013
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cabinet3
-      rect:
-        serializedVersion: 2
-        x: 231
-        y: 341
-        width: 34
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4f587a8d74f479047b320017e7784adf
-      internalID: -32252338
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: metal box
-      rect:
-        serializedVersion: 2
-        x: 217
-        y: 389
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6140f724cce471a4fac8d4428bbe61ec
-      internalID: 1134833529
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: floating metal platform
-      rect:
-        serializedVersion: 2
-        x: 10
-        y: 440
+        x: 3
+        y: 191
         width: 43
         height: 21
       alignment: 0
@@ -691,19 +124,376 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7653e604c495d6847910d5ab3c5ff633
-      internalID: 1067718447
+      spriteID: dc54e3d876fe9894cbc02907de4be742
+      internalID: -695766033
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sciif cabinet1
+      name: alien platform1
       rect:
         serializedVersion: 2
-        x: 241
-        y: 201
-        width: 45
+        x: 69
+        y: 169
+        width: 64
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5fb3707a9193c34d9091ad173c13bf0
+      internalID: -209423674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alien platform2
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 171
+        width: 64
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c18c4d5f65ed2a04a93a6912f0c4c6b6
+      internalID: 1863778887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alien platform3
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 170
+        width: 55
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f6e3ed617512944b99a335c54300ec9
+      internalID: -978792421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireplace platform
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 145
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64d24946c32bf3f41a91770491e20c4a
+      internalID: 1830562102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi platform1
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 128
+        width: 34
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aea0c32bb8644c6449a0016e1f116a75
+      internalID: 804211516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi platform2
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 127
+        width: 32
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf833ecb8f760ad44b4a44ee93649d8f
+      internalID: 1276290266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi platform3
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 107
+        width: 51
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a3672de275864f488c06575b951490d
+      internalID: -195317762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi platform4
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 90
+        width: 28
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7f5610b8f4994543a8b00497f3ea839
+      internalID: -1356992340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi platform5
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 56
+        width: 49
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5707bfde4696b844d882f449df5da2f2
+      internalID: 1392671377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scifi platform6
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 37
+        width: 26
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7365c6949ad19064b97b2236a7a3ad2e
+      internalID: 625457559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: big scifi platform1
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 106
+        width: 57
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 991affc4596f5d645ac9986da1a1b5ec
+      internalID: -1057941973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: big scifi platform2
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 72
+        width: 44
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa2c1416689bef14581d3da9f9582a63
+      internalID: 1363437058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: big scifi platform3
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 34
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a4aedf450f39d141a1f02cf30b2489c
+      internalID: -2058792727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: big scifiplatform4
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 32
+        width: 15
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bae1b50f342e78e4f9b999fefbb7a19d
+      internalID: 1304786104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: big scifi platform5
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 138
+        width: 48
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 765185c5d9fc57646a5186b5e747e793
+      internalID: 1421784022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: big scifi platform6
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 113
+        width: 49
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11998742daf55b946a531871ff181a5b
+      internalID: 380908641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deco box1
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 67
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9123a585626deb84798d43891aaa80ac
+      internalID: 2002163697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deco box2
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 65
+        width: 13
         height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -712,8 +502,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a653e22ebe82604993725837dff953f
-      internalID: 1257223714
+      spriteID: 8be67f319d9a97d449200dbd17752435
+      internalID: -1229950412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deco box3
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 35
+        width: 15
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3979f1e339bdf4e4e84d123fe6616f40
+      internalID: -1175203652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deco box4
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 39
+        width: 29
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d255f03a8c45e1f46895575d31d08746
+      internalID: -378460644
       vertices: []
       indices: 
       edges: []
@@ -729,35 +561,27 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      alien_building1: -1013688240
-      alien_building2: -1341518339
-      alien_building3: -1723641779
-      alien_plant1: -1610333193
-      building1: 1855899874
-      building2: 1515142151
-      cabinet1: -2080652033
-      cabinet2: 958271866
-      cabinet3: -32252338
-      decorative sprites_0: 300030141
-      drain: -2065830691
-      floating metal platform: 1067718447
-      gate1: 1230110115
-      houseplant1: -307884683
-      houseplant2: 867525902
-      metal box: 1134833529
-      pipe_plant1: -1423724958
-      plant1: -1598235459
-      plant2: 532759174
-      pot: 747535013
-      sciif cabinet1: 1257223714
-      small_tree1: 815724810
-      trashbin: -703221964
-      tree1: -173668860
-      tree2: 221736290
-      tree3: -1167641015
-      tree4: 1278859234
-      tree5: 1868175913
-      tree6: 2138908606
+      alien platform1: -209423674
+      alien platform2: 1863778887
+      alien platform3: -978792421
+      big scifi platform1: -1057941973
+      big scifi platform2: 1363437058
+      big scifi platform3: -2058792727
+      big scifi platform5: 1421784022
+      big scifi platform6: 380908641
+      big scifiplatform4: 1304786104
+      deco box1: 2002163697
+      deco box2: -1229950412
+      deco box3: -1175203652
+      deco box4: -378460644
+      fireplace platform: 1830562102
+      metal floating platform: -695766033
+      scifi platform1: 804211516
+      scifi platform2: 1276290266
+      scifi platform3: -195317762
+      scifi platform4: -1356992340
+      scifi platform5: 1392671377
+      scifi platform6: 625457559
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

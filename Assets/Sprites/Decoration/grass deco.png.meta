@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 56fe8d9a3f2461b4480a510d5b3251fb
+guid: 752138238e150c74c8abdb83beb23a79
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,600 +110,474 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: houseplant1
+      name: grass tree1
       rect:
         serializedVersion: 2
-        x: 144
-        y: 389
-        width: 15
-        height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 013dce9f135e0bb41a6285259a06c05b
-      internalID: -307884683
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: houseplant2
-      rect:
-        serializedVersion: 2
-        x: 165
-        y: 389
-        width: 15
-        height: 33
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1fdf6d264e9e9a44cbe6d8b7be8687ae
-      internalID: 867525902
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: small_tree1
-      rect:
-        serializedVersion: 2
-        x: 104
-        y: 208
-        width: 7
-        height: 19
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 76abe245604e5fe4a9e4f39ad2abf0ae
-      internalID: 815724810
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: plant1
-      rect:
-        serializedVersion: 2
-        x: 118
-        y: 208
-        width: 7
-        height: 17
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4e53399a987868344868fdbc46c9f9e3
-      internalID: -1598235459
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: decorative sprites_0
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 212
-        width: 1
-        height: 1
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 587934b0930dd64489af470cd3f6391c
-      internalID: 300030141
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: plant2
-      rect:
-        serializedVersion: 2
-        x: 130
-        y: 208
-        width: 13
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7bfb364a6ac01824da6ab1e72dd923cd
-      internalID: 532759174
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tree1
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 165
-        width: 17
-        height: 23
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 00f00abeaffddf3448032a70ab0a81a2
-      internalID: -173668860
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tree2
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 165
-        width: 16
-        height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7086ab7b5dc5cd944ad54160884d3bae
-      internalID: 221736290
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tree3
-      rect:
-        serializedVersion: 2
-        x: 54
-        y: 165
-        width: 20
-        height: 23
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5dec5b5f6cd674243af35a961a85e49a
-      internalID: -1167641015
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tree4
-      rect:
-        serializedVersion: 2
-        x: 81
-        y: 165
-        width: 19
-        height: 25
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 707dc5417ad10834781021efd28f9d1c
-      internalID: 1278859234
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tree5
-      rect:
-        serializedVersion: 2
-        x: 107
-        y: 165
-        width: 19
-        height: 25
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d566e805fd108c34db5df8fbe5d62e7f
-      internalID: 1868175913
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tree6
-      rect:
-        serializedVersion: 2
-        x: 133
-        y: 165
-        width: 26
-        height: 35
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2ce8660a621677e4ca8ec0f1e523583f
-      internalID: 2138908606
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pipe_plant1
-      rect:
-        serializedVersion: 2
-        x: 177
-        y: 197
-        width: 30
-        height: 25
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6bc7598a711af334d9632f0ca06a2dc5
-      internalID: -1423724958
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: alien_building1
-      rect:
-        serializedVersion: 2
-        x: 10
-        y: 203
-        width: 45
-        height: 66
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e72048aed1a1b5247a0603dc862d17ca
-      internalID: -1013688240
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: alien_building2
-      rect:
-        serializedVersion: 2
-        x: 69
-        y: 236
-        width: 24
-        height: 39
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8ace6fbe07b50ee44b254bd61c02fe3f
-      internalID: -1341518339
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: alien_building3
-      rect:
-        serializedVersion: 2
-        x: 65
-        y: 207
-        width: 32
-        height: 17
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dd9255d7028891149901f4a716936468
-      internalID: -1723641779
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: alien_plant1
-      rect:
-        serializedVersion: 2
-        x: 183
-        y: 236
-        width: 18
-        height: 47
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fd0c37cc3c9e72a419420227a33ac16c
-      internalID: -1610333193
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: building1
-      rect:
-        serializedVersion: 2
-        x: 161
-        y: 437
-        width: 65
-        height: 60
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c1d9f42d52958fa4aa825504178b053c
-      internalID: 1855899874
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: building2
-      rect:
-        serializedVersion: 2
-        x: 232
-        y: 453
-        width: 96
-        height: 44
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 95486c8877bebc546b6ba0d0b47b63ef
-      internalID: 1515142151
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: gate1
-      rect:
-        serializedVersion: 2
-        x: 331
-        y: 454
-        width: 45
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 21dd4f5b4527c3040aa5cf8ade28a209
-      internalID: 1230110115
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cabinet1
-      rect:
-        serializedVersion: 2
-        x: 11
-        y: 284
-        width: 43
-        height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 797c43c84b6ebba45b685f6911db90b5
-      internalID: -2080652033
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cabinet2
-      rect:
-        serializedVersion: 2
-        x: 61
-        y: 284
-        width: 36
+        x: 1
+        y: 89
+        width: 14
         height: 24
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1df9878d02d5f24449fb9324356f2c75
-      internalID: 958271866
+      spriteID: 9dbc2b8947106dc4ebe3cf17a30defc8
+      internalID: -911845987
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: trashbin
+      name: grass tree2
       rect:
         serializedVersion: 2
-        x: 9
-        y: 325
-        width: 41
-        height: 37
+        x: 121
+        y: 79
+        width: 19
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 252f7e37e1ae01b4bb34df6972b54ebd
-      internalID: -703221964
+      spriteID: 54c0c98cf228e1741944fbc8dcdfe763
+      internalID: 1544514902
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: drain
+      name: grass tree3
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 19
+        width: 16
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 487dc458f2636e74f8bbc40edbcf86d1
+      internalID: -1116296147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grass tree4
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 24
+        width: 27
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83c9fdfb302636445b944c7cefc3c1e3
+      internalID: -416772132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grass deco1
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 74
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 342701504be473e41833cc18045d3ae8
+      internalID: 1237665534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grass deco2
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 74
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5891fc2e64480e49919d33d773ca7e5
+      internalID: -1303220058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grass deco3
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 74
+        width: 18
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 473dc6646fa56e4408eaff4f13f49ce2
+      internalID: 627100243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grass plant1
       rect:
         serializedVersion: 2
         x: 60
-        y: 325
-        width: 35
+        y: 74
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c131a8d05a55d83458f8c1260f4d6bb6
+      internalID: -871700608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pot1
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 108
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15178a82615256c4ab68ac7e0482c5b9
+      internalID: -1803458959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pot2
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 106
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28c0306dde927814380e2f7b2ad97d19
+      internalID: -136614454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pot3
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 90
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce6dda487e6ed8a458b6e362485976dc
+      internalID: 270517526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pot4
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 90
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b713f95a4a89b04ab61adbf0efa82b6
+      internalID: 834412389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pot5
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 90
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3678ce238b5fcb44db60986ccad8bfc9
+      internalID: -355905510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pot6
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 90
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fb23d767da30054ca86c2a193f4fda1
+      internalID: -2127635864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: compost
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 89
+        width: 8
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69311be51502fde4fb0d79993f45fd89
+      internalID: 1920263039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal pot
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 90
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ba25b5d0f12fb34b888521da5762b15
+      internalID: 770406909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shed1
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 88
+        width: 26
         height: 29
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b44438fd1d1e3f54f966228d895e878f
-      internalID: -2065830691
+      spriteID: 740617a978ccc864ead4aebd7d578435
+      internalID: 1865220493
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pot
+      name: fridge
       rect:
         serializedVersion: 2
-        x: 231
-        y: 303
-        width: 34
+        x: 99
+        y: 42
+        width: 27
         height: 30
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 85b842bd29adadd4c9d1b9df3c3c960a
-      internalID: 747535013
+      spriteID: 26008ec5c7b17b14dab133c999405de2
+      internalID: -852308706
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cabinet3
+      name: cabinet
       rect:
         serializedVersion: 2
-        x: 231
-        y: 341
-        width: 34
-        height: 36
+        x: 69
+        y: 41
+        width: 21
+        height: 30
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f587a8d74f479047b320017e7784adf
-      internalID: -32252338
+      spriteID: af27e359f4de0464a878f03d44d3f9e7
+      internalID: -999352461
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: metal box
+      name: boulder
       rect:
         serializedVersion: 2
-        x: 217
-        y: 389
-        width: 16
-        height: 16
+        x: 57
+        y: 16
+        width: 15
+        height: 15
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6140f724cce471a4fac8d4428bbe61ec
-      internalID: 1134833529
+      spriteID: 9a8f333b478f3a34cb2136afbffbb134
+      internalID: -978805274
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floating metal platform
+      name: shed2
       rect:
         serializedVersion: 2
-        x: 10
-        y: 440
-        width: 43
-        height: 21
+        x: 85
+        y: 11
+        width: 36
+        height: 23
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7653e604c495d6847910d5ab3c5ff633
-      internalID: 1067718447
+      spriteID: 896f5a70cc6d21646aadf92ec653e238
+      internalID: 490555190
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sciif cabinet1
+      name: shed3
       rect:
         serializedVersion: 2
-        x: 241
-        y: 201
-        width: 45
+        x: 6
+        y: 14
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7c6b2eefeb8f9d4684ee1d82319af81
+      internalID: -711239958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grass plant2
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 45
+        width: 8
         height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -712,8 +586,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a653e22ebe82604993725837dff953f
-      internalID: 1257223714
+      spriteID: bc0cda2957e867c47988fb7cf6cb4672
+      internalID: 1609286478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grass plant3
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 45
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4335315a30c9df44a71071726bd015e
+      internalID: 1338395758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grass plant4
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 44
+        width: 11
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93ec9ddaa6f8996468c8d5ab367ad471
+      internalID: 1865408226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grass plant5
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 14
+        width: 5
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41fcc1dc5d00e2048a7f1dbdefd9f228
+      internalID: 2006421583
       vertices: []
       indices: 
       edges: []
@@ -729,35 +666,32 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      alien_building1: -1013688240
-      alien_building2: -1341518339
-      alien_building3: -1723641779
-      alien_plant1: -1610333193
-      building1: 1855899874
-      building2: 1515142151
-      cabinet1: -2080652033
-      cabinet2: 958271866
-      cabinet3: -32252338
-      decorative sprites_0: 300030141
-      drain: -2065830691
-      floating metal platform: 1067718447
-      gate1: 1230110115
-      houseplant1: -307884683
-      houseplant2: 867525902
-      metal box: 1134833529
-      pipe_plant1: -1423724958
-      plant1: -1598235459
-      plant2: 532759174
-      pot: 747535013
-      sciif cabinet1: 1257223714
-      small_tree1: 815724810
-      trashbin: -703221964
-      tree1: -173668860
-      tree2: 221736290
-      tree3: -1167641015
-      tree4: 1278859234
-      tree5: 1868175913
-      tree6: 2138908606
+      boulder: -978805274
+      cabinet: -999352461
+      compost: 1920263039
+      fridge: -852308706
+      grass deco1: 1237665534
+      grass deco2: -1303220058
+      grass deco3: 627100243
+      grass plant1: -871700608
+      grass plant2: 1609286478
+      grass plant3: 1338395758
+      grass plant4: 1865408226
+      grass plant5: 2006421583
+      grass tree1: -911845987
+      grass tree2: 1544514902
+      grass tree3: -1116296147
+      grass tree4: -416772132
+      metal pot: 770406909
+      pot1: -1803458959
+      pot2: -136614454
+      pot3: 270517526
+      pot4: 834412389
+      pot5: -355905510
+      pot6: -2127635864
+      shed1: 1865220493
+      shed2: 490555190
+      shed3: -711239958
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

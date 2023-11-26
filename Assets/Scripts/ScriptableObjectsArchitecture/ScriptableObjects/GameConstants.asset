@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 986bd8facb947dd4daa87a7e92eda224, type: 3}
   m_Name: GameConstants
   m_EditorClassIdentifier: 
-  jumpForce: 5
-  delayTime: 20
-  maxFuel: 50
+  startingJumpForce: 10
+  startingFuel: 100
+  delayTime: 5
+  maxFuel: 100
   jumpableGround:
     serializedVersion: 2
     m_Bits: 64
+  fuelIncrement: 1

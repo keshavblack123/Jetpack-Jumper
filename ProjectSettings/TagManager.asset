@@ -50,6 +50,15 @@ TagManager:
   - name: Foreground
     uniqueID: 2513220497
     locked: 0
+  - name: Decoration (behind platform)
+    uniqueID: 3164694443
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Decoration (In front of platform)
+    uniqueID: 2916781199
+    locked: 0
+  - name: Player
+    uniqueID: 2806487723
     locked: 0
