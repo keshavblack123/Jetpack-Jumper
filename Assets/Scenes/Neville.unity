@@ -5620,8 +5620,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1194048818}
-  - component: {fileID: 1194048819}
+  - component: {fileID: 1194048821}
   - component: {fileID: 1194048820}
+  - component: {fileID: 1194048819}
   m_Layer: 0
   m_Name: Limits
   m_TagString: Limits
@@ -5644,8 +5645,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!68 &1194048819
-EdgeCollider2D:
+--- !u!61 &1194048819
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -5676,17 +5677,21 @@ EdgeCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -2.8023262, y: 154.6954}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 50.38597, y: 26.457825}
   m_EdgeRadius: 0
-  m_Points:
-  - {x: -13.266794, y: 141.77904}
-  - {x: -13.254073, y: -10.250556}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
---- !u!68 &1194048820
-EdgeCollider2D:
+--- !u!61 &1194048820
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -5717,15 +5722,64 @@ EdgeCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 24.342123, y: 74.57722}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 14.434887, y: 164.5898}
   m_EdgeRadius: 0
-  m_Points:
-  - {x: 6.7250605, y: 141.81917}
-  - {x: 6.7161713, y: -10.243512}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
+--- !u!61 &1194048821
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1194048817}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -29.045546, y: 74.576416}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 12.151905, y: 165.3229}
+  m_EdgeRadius: 0
 --- !u!1001 &1222664631
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6433,7 +6487,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.014759064, y: -0.26552677}
+  m_Offset: {x: 1.5513668, y: -0.26552677}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0.0625, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -6444,7 +6498,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 26.48713, y: 2.5314465}
+  m_Size: {x: 68.07088, y: 2.5314465}
   m_EdgeRadius: 0
 --- !u!4 &1336832076 stripped
 Transform:
@@ -10190,8 +10244,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6d558b15ea65ca418c471f58ac0f5bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftLimit: -1.5
-  rightLimit: 1.5
+  leftLimit: -11.1
+  rightLimit: 11.1
   smoothTime: 0.125
 --- !u!114 &8761588153576116373
 MonoBehaviour:
