@@ -74,7 +74,7 @@ public class PlayerController : MonoBehaviour
         mouseDirection = getCursorLocation();
 
         //Temp Fix to prevent sliding
-        if (IsGrounded)
+        if (IsGroundedX())
         {
             canDoubleJump = true;
             if (!Input.GetMouseButton(0))
@@ -99,8 +99,9 @@ public class PlayerController : MonoBehaviour
                 // JumpAction using Mouse Left Click
                 if (Input.GetMouseButton(0))
                 {
-                    if (IsGrounded)
+                    if (IsGroundedX())
                     {
+                        Debug.Log("Here");
                         //Click to charge
                         jumpForce.Value += 0.1f * Time.deltaTime * 600;
                         // Debug.Log("Charge" + " " + jumpForce);
@@ -113,7 +114,7 @@ public class PlayerController : MonoBehaviour
                     {
                         // if canDoubleJump, jump where mouse is (use all maxJumpForce fuel)
                         if (canDoubleJump && !IsGrounded && Input.GetMouseButton(0))
-                        {
+                        {Debug.Log("Here2");
                             //Play jump audio here
                             playerAudio.PlayOneShot(jumpSound);
                             if (fuel.Value < 20f)
@@ -134,8 +135,8 @@ public class PlayerController : MonoBehaviour
                     }
                 }
                 //Release to jump
-                if (Input.GetMouseButtonUp(0) && IsGrounded)
-                {
+                if (Input.GetMouseButtonUp(0) && IsGroundedX())
+                {Debug.Log("Here3");
                     // Fix Moving Platform Bug
                     transform.SetParent(null);
                     //Play jump audio here
@@ -161,7 +162,7 @@ public class PlayerController : MonoBehaviour
                 Cursor.SetCursor(customCursor, Vector2.zero, CursorMode.Auto);
             }
             // Refuel on the ground after a delay
-            if (IsGrounded && fuel.Value >= 0)
+            if (IsGroundedX() && fuel.Value >= 0)
             {
                 // Refuel after a delay on the ground
                 if (fuel.Value < maxFuel)
@@ -231,18 +232,18 @@ public class PlayerController : MonoBehaviour
         jumpForce.SetValue(gameConstants.startingJumpForce);
     }
 
-    // public bool IsGrounded()
-    // {
-    //     RaycastHit2D raycastHit = Physics2D.BoxCast(
-    //         boxCollider2D.bounds.center,
-    //         boxCollider2D.bounds.size,
-    //         0,
-    //         Vector2.down,
-    //         0.1f,
-    //         jumpableGround
-    //     );
-    //     return raycastHit.collider != null;
-    // }
+    public bool IsGroundedX()
+    {
+        RaycastHit2D raycastHit = Physics2D.BoxCast(
+            boxCollider2D.bounds.center,
+            boxCollider2D.bounds.size,
+            0,
+            Vector2.down,
+            0.1f,
+            jumpableGround
+        );
+        return raycastHit.collider != null;
+    }
 
     private void spawnGroundParticles()
     {
