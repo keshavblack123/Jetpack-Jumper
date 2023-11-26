@@ -38,7 +38,12 @@ public class MovingPlatformController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            collision.gameObject.transform.SetParent(transform);
+            Bounds triggerBounds = GetComponent<Collider2D>().bounds;
+
+            if (collision.bounds.min.y > triggerBounds.max.y)
+            {   
+                collision.gameObject.transform.SetParent(transform);
+            }
         }
     }
 

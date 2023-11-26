@@ -102,7 +102,7 @@ public class PlayerController : MonoBehaviour
                     if (IsGrounded)
                     {
                         //Click to charge
-                        jumpForce.Value += 0.1f*Time.deltaTime*600;
+                        jumpForce.Value += 0.1f * Time.deltaTime * 600;
                         // Debug.Log("Charge" + " " + jumpForce);
                         if (jumpForce.Value > maxJumpForce)
                         {
@@ -131,50 +131,52 @@ public class PlayerController : MonoBehaviour
                             delay = delayTime;
                             canDoubleJump = false;
                         }
+                    }
+                }
+                //Release to jump
+                if (Input.GetMouseButtonUp(0) && IsGrounded)
+                {
+                    // Fix Moving Platform Bug
+                    transform.SetParent(null);
+                    //Play jump audio here
+                    playerAudio.PlayOneShot(jumpSound);
+                    if (jumpForce.Value < fuel.Value)
+                    {
+                        Jump();
+                        fuelDrain(jumpForce.Value);
+                    }
+                    else
+                    {
+                        jumpForce.SetValue(fuel.Value);
+                        fuelDrain(fuel.Value);
+                        Jump();
+                    }
+                    // Reset JumpForce after release
+                    jumpForce.SetValue(5f);
+                    delay = delayTime;
                 }
             }
-            //Release to jump
-            if (Input.GetMouseButtonUp(0) && IsGrounded)
+            else
             {
-                //Play jump audio here
-                playerAudio.PlayOneShot(jumpSound);
-                if (jumpForce.Value < fuel.Value)
-                {
-                    Jump();
-                    fuelDrain(jumpForce.Value);
-                }
-                else
-                {
-                    jumpForce.SetValue(fuel.Value);
-                    fuelDrain(fuel.Value);
-                    Jump();
-                }
-                // Reset JumpForce after release
-                jumpForce.SetValue(5f);
-                delay = delayTime;
+                Cursor.SetCursor(customCursor, Vector2.zero, CursorMode.Auto);
             }
-        }
-        else
-        {
-            Cursor.SetCursor(customCursor, Vector2.zero, CursorMode.Auto);
-        }
-        // Refuel on the ground after a delay
-        if (IsGrounded && fuel.Value >= 0)
-        {
-            // Refuel after a delay on the ground
-            if (fuel.Value < maxFuel)
+            // Refuel on the ground after a delay
+            if (IsGrounded && fuel.Value >= 0)
             {
-                if (delay > 0)
+                // Refuel after a delay on the ground
+                if (fuel.Value < maxFuel)
                 {
-                    delay -= 0.1f*Time.deltaTime*600;
-                }
-                if (delay < 0)
-                {
-                    refuel();
+                    if (delay > 0)
+                    {
+                        delay -= 0.1f * Time.deltaTime * 600;
+                    }
+                    if (delay < 0)
+                    {
+                        refuel();
+                    }
                 }
             }
         }
-    }
     }
 
     public void fuelDrain(float drainValue)
@@ -192,9 +194,6 @@ public class PlayerController : MonoBehaviour
 
     public void Jump()
     {
-        // Fix Moving Platform Bug
-        transform.SetParent(null);
-
         // If mouse is below the player
         if (mouseDirection.y < -0.05)
         {
