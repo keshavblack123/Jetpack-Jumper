@@ -31,15 +31,14 @@ public class AnimationManager : MonoBehaviour
     private void UpdateAnimationState()
     {
         MovementState state;
-        
+
         state = MovementState.idle;
-        
 
         if(state == MovementState.idle && Input.GetMouseButton(0))
         {
             state = MovementState.charge;
         }
-        else if (rb.velocity.y > 0.1f)
+        else if (rb.velocity.y > 0.1f) 
         {
             state = MovementState.jump;
         }

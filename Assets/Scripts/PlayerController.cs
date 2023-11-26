@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour
     public AudioClip hitSideWall;
 
     private float delay;
+    public bool IsGrounded = true;
 
     [Header("Game Objects")]
     // public TextMeshProUGUI jumpText;
@@ -73,7 +74,7 @@ public class PlayerController : MonoBehaviour
         mouseDirection = getCursorLocation();
 
         //Temp Fix to prevent sliding
-        if (IsGrounded())
+        if (IsGrounded)
         {
             canDoubleJump = true;
             if (!Input.GetMouseButton(0))
@@ -98,7 +99,7 @@ public class PlayerController : MonoBehaviour
                 // JumpAction using Mouse Left Click
                 if (Input.GetMouseButton(0))
                 {
-                    if (IsGrounded())
+                    if (IsGrounded)
                     {
                         //Click to charge
                         jumpForce.Value += 0.1f;
@@ -111,7 +112,7 @@ public class PlayerController : MonoBehaviour
                     else
                     {
                         // if canDoubleJump, jump where mouse is (use all maxJumpForce fuel)
-                        if (canDoubleJump && !IsGrounded() && Input.GetMouseButton(0))
+                        if (canDoubleJump && !IsGrounded && Input.GetMouseButton(0))
                         {
                             //Play jump audio here
                             playerAudio.PlayOneShot(jumpSound);
@@ -130,17 +131,10 @@ public class PlayerController : MonoBehaviour
                             delay = delayTime;
                             canDoubleJump = false;
                         }
-                        // Freeze player when mouse click down when in air
-                        // as long as fuel >0
-                        // rb.velocity = Vector3.zero;
-                        // rb.constraints = RigidbodyConstraints2D.FreezePosition;
-                        // fuelDrain(0.1f);
-                        // jumpForce.Value += 0.1f;
-                    }
                 }
             }
             //Release to jump
-            if (Input.GetMouseButtonUp(0) && IsGrounded())
+            if (Input.GetMouseButtonUp(0) && IsGrounded)
             {
                 //Play jump audio here
                 playerAudio.PlayOneShot(jumpSound);
@@ -165,7 +159,7 @@ public class PlayerController : MonoBehaviour
             Cursor.SetCursor(customCursor, Vector2.zero, CursorMode.Auto);
         }
         // Refuel on the ground after a delay
-        if (IsGrounded() && fuel.Value >= 0)
+        if (IsGrounded && fuel.Value >= 0)
         {
             // Refuel after a delay on the ground
             if (fuel.Value < maxFuel)
@@ -180,12 +174,7 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
-
-        // // Drain fuel mid air
-        // if (!IsGrounded() && fuel.Value > 0 && rb.velocity.y != 0)
-        // {
-        //     fuelDrain();
-        // }
+    }
     }
 
     public void fuelDrain(float drainValue)
@@ -209,11 +198,11 @@ public class PlayerController : MonoBehaviour
         // If mouse is below the player
         if (mouseDirection.y < -0.05)
         {
-            // Debug.Log("Jump");
             //Unfreeze player Set back rotation constraint
             rb.constraints = RigidbodyConstraints2D.None;
             rb.constraints = RigidbodyConstraints2D.FreezeRotation;
             rb.AddForce(-1 * mouseDirection * jumpForce.Value, ForceMode2D.Impulse);
+            IsGrounded = false;
 
             if (mouseDirection.x > 0)
             {
@@ -243,35 +232,17 @@ public class PlayerController : MonoBehaviour
         jumpForce.SetValue(gameConstants.startingJumpForce);
     }
 
-    // public void fall()
+    // public bool IsGrounded()
     // {
-    //     rb.constraints = RigidbodyConstraints2D.None;
-    //     rb.constraints = RigidbodyConstraints2D.FreezeRotation;
-    // }
-
-    public bool IsGrounded()
-    {
-        RaycastHit2D raycastHit = Physics2D.BoxCast(
-            boxCollider2D.bounds.center,
-            boxCollider2D.bounds.size,
-            0,
-            Vector2.down,
-            0.1f,
-            jumpableGround
-        );
-        return raycastHit.collider != null;
-    }
-
-    // private bool floatState()
-    // {
-    //     if (!IsGrounded() && rb.velocity.magnitude == 0 && Input.GetMouseButton(0))
-    //     {
-    //         return true;
-    //     }
-    //     else
-    //     {
-    //         return false;
-    //     }
+    //     RaycastHit2D raycastHit = Physics2D.BoxCast(
+    //         boxCollider2D.bounds.center,
+    //         boxCollider2D.bounds.size,
+    //         0,
+    //         Vector2.down,
+    //         0.1f,
+    //         jumpableGround
+    //     );
+    //     return raycastHit.collider != null;
     // }
 
     private void spawnGroundParticles()
@@ -298,6 +269,7 @@ public class PlayerController : MonoBehaviour
                 spawnGroundParticles();
                 // Play land on platform sound
                 playerAudio.PlayOneShot(landOnPlatformSound);
+                IsGrounded = true;
             }
         }
         if (collision.gameObject.CompareTag("Limits"))
