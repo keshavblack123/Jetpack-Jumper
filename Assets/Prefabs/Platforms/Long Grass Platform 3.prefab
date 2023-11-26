@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6530275338275452709}
   - component: {fileID: 4580680174302650830}
-  - component: {fileID: 114418345532554793}
+  - component: {fileID: 8463081018321430198}
   m_Layer: 6
   m_Name: Long Grass Platform 3
   m_TagString: Ground
@@ -85,8 +85,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &114418345532554793
-BoxCollider2D:
+--- !u!60 &8463081018321430198
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -117,7 +117,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.022882938, y: 0.32523823}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -127,6 +127,34 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 6.459338, y: 0.6837168}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 2.7494082, y: -0.086025715}
+      - {x: 2.831758, y: -0.073263645}
+      - {x: 2.8367734, y: 0.0053777695}
+      - {x: 2.9150944, y: 0.005792141}
+      - {x: 2.9200697, y: 0.083869696}
+      - {x: 2.9984279, y: 0.08717799}
+      - {x: 3.004609, y: 0.16457534}
+      - {x: 3.080789, y: 0.17220736}
+      - {x: 3.083158, y: 0.33404398}
+      - {x: 3.1666574, y: 0.33144045}
+      - {x: 3.17729, y: 0.41820145}
+      - {x: 3.2381115, y: 0.42097506}
+      - {x: 3.2349648, y: 0.6655668}
+      - {x: 1.0337455, y: 0.66282606}
+      - {x: -3.1586313, y: 0.66361046}
+      - {x: -3.1530387, y: 0.41128254}
+      - {x: -3.2532742, y: 0.41128445}
+      - {x: -3.248668, y: 0.089113}
+      - {x: -3.1691453, y: 0.08235121}
+      - {x: -3.168772, y: -0.0068621635}
+      - {x: -3.0886397, y: -0.0022422671}
+      - {x: -3.0848277, y: -0.0872345}
+      - {x: -3.0801613, y: -0.08737087}
+      - {x: -3.0041087, y: -0.08737087}
+      - {x: -3.000937, y: -0.17207408}
+      - {x: -1.3272059, y: -0.16937035}
+      - {x: 0, y: -0.16733712}
+      - {x: 2.7547555, y: -0.16451249}
+  m_UseDelaunayMesh: 0

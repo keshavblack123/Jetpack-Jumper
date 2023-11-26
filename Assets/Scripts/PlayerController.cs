@@ -102,7 +102,7 @@ public class PlayerController : MonoBehaviour
                     if (IsGrounded)
                     {
                         //Click to charge
-                        jumpForce.Value += 0.1f;
+                        jumpForce.Value += 0.1f*Time.deltaTime*600;
                         // Debug.Log("Charge" + " " + jumpForce);
                         if (jumpForce.Value > maxJumpForce)
                         {
@@ -166,7 +166,7 @@ public class PlayerController : MonoBehaviour
             {
                 if (delay > 0)
                 {
-                    delay -= 0.1f;
+                    delay -= 0.1f*Time.deltaTime*600;
                 }
                 if (delay < 0)
                 {
@@ -187,7 +187,7 @@ public class PlayerController : MonoBehaviour
 
     public void refuel()
     {
-        fuel.ApplyChange(fuelIncrement);
+        fuel.ApplyChange(fuelIncrement * Time.deltaTime * 500);
     }
 
     public void Jump()

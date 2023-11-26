@@ -3774,6 +3774,8 @@ MonoBehaviour:
   offset: {x: -8.87, y: -4.62, z: 0}
   screenPosition: {x: 0, y: 0}
   minY: -141
+  minX: -480
+  maxX: 490
 --- !u!1 &703143605
 GameObject:
   m_ObjectHideFlags: 0
@@ -6256,6 +6258,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 738617248}
     m_Modifications:
+    - target: {fileID: 114418345532554793, guid: 74c486a5d91c6e041859d1faf2c575f8, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6530275338275452709, guid: 74c486a5d91c6e041859d1faf2c575f8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.032951
@@ -8423,6 +8429,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 738617248}
     m_Modifications:
+    - target: {fileID: 114418345532554793, guid: 955abfd30c323b247af85854fbfdac5f, type: 3}
+      propertyPath: m_Size.x
+      value: 4.9164314
+      objectReference: {fileID: 0}
+    - target: {fileID: 114418345532554793, guid: 955abfd30c323b247af85854fbfdac5f, type: 3}
+      propertyPath: m_Size.y
+      value: 0.74816465
+      objectReference: {fileID: 0}
+    - target: {fileID: 114418345532554793, guid: 955abfd30c323b247af85854fbfdac5f, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.0017198324
+      objectReference: {fileID: 0}
+    - target: {fileID: 114418345532554793, guid: 955abfd30c323b247af85854fbfdac5f, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.35746217
+      objectReference: {fileID: 0}
     - target: {fileID: 6530275338275452709, guid: 955abfd30c323b247af85854fbfdac5f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.20328379
@@ -8536,6 +8558,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 738617248}
     m_Modifications:
+    - target: {fileID: 114418345532554793, guid: 8a0fb0cd5ca0220479e958d33552f50e, type: 3}
+      propertyPath: m_Size.x
+      value: 6.4109445
+      objectReference: {fileID: 0}
+    - target: {fileID: 114418345532554793, guid: 8a0fb0cd5ca0220479e958d33552f50e, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.027529955
+      objectReference: {fileID: 0}
     - target: {fileID: 4580680174302650830, guid: 8a0fb0cd5ca0220479e958d33552f50e, type: 3}
       propertyPath: m_FlipX
       value: 1
@@ -9470,26 +9500,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6255098274112705628, guid: f3a21b69250268443bae7fdefcbe33c0, type: 3}
-      propertyPath: fuel
-      value: 
-      objectReference: {fileID: 11400000, guid: 3089af160a9027e4d9522616191969ee, type: 2}
-    - target: {fileID: 6255098274112705628, guid: f3a21b69250268443bae7fdefcbe33c0, type: 3}
-      propertyPath: fuelText
-      value: 
-      objectReference: {fileID: 2600553509400960809}
-    - target: {fileID: 6255098274112705628, guid: f3a21b69250268443bae7fdefcbe33c0, type: 3}
-      propertyPath: jumpText
-      value: 
-      objectReference: {fileID: 7985390359880765368}
-    - target: {fileID: 6255098274112705628, guid: f3a21b69250268443bae7fdefcbe33c0, type: 3}
-      propertyPath: jumpForce
-      value: 
-      objectReference: {fileID: 11400000, guid: 50935c7acd85fd9488c9f6722bdd9dfa, type: 2}
-    - target: {fileID: 6255098274112705628, guid: f3a21b69250268443bae7fdefcbe33c0, type: 3}
-      propertyPath: gameConstants
-      value: 
-      objectReference: {fileID: 11400000, guid: d8f22cdab1547be40a3f4a20fd0fa9ce, type: 2}
     - target: {fileID: 7896665330391910466, guid: f3a21b69250268443bae7fdefcbe33c0, type: 3}
       propertyPath: m_Name
       value: Player2.0
@@ -10165,6 +10175,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fuel: {fileID: 11400000, guid: 3089af160a9027e4d9522616191969ee, type: 2}
   jumpForce: {fileID: 11400000, guid: 50935c7acd85fd9488c9f6722bdd9dfa, type: 2}
+  gameConstants: {fileID: 11400000, guid: d8f22cdab1547be40a3f4a20fd0fa9ce, type: 2}
   fuelText: {fileID: 2600553509400960809}
   jumpText: {fileID: 7985390359880765368}
 --- !u!114 &8644348295513671304
@@ -10179,6 +10190,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6d558b15ea65ca418c471f58ac0f5bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  leftLimit: -1.5
+  rightLimit: 1.5
   smoothTime: 0.125
 --- !u!114 &8761588153576116373
 MonoBehaviour:

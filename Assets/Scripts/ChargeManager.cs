@@ -20,6 +20,8 @@ public class ChargeManager : MonoBehaviour
     public Vector2 screenPosition;
 
     public float minY;
+    public float minX;
+    public float maxX;
 
     // Start is called before the first frame update
     void Start()
@@ -33,8 +35,9 @@ public class ChargeManager : MonoBehaviour
     {
         // Follow Player Pos
         screenPosition = Camera.main.WorldToScreenPoint(player.transform.position + offset);
-        
+
         screenPosition.y = Mathf.Max(screenPosition.y, minY);
+        screenPosition.x = Mathf.Clamp(screenPosition.x, minX,maxX);
         GetComponent<RectTransform>().anchoredPosition = screenPosition;
 
         // Animate The Charge Bar

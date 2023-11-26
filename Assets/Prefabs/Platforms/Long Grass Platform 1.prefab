@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6530275338275452709}
   - component: {fileID: 4580680174302650830}
-  - component: {fileID: 114418345532554793}
+  - component: {fileID: 7446756111505661505}
   m_Layer: 6
   m_Name: Long Grass Platform 1
   m_TagString: Ground
@@ -85,8 +85,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &114418345532554793
-BoxCollider2D:
+--- !u!60 &7446756111505661505
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -117,7 +117,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0041952133, y: 0.3776517}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -127,6 +127,24 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 5.1358128, y: 0.7885437}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: -2.535199, y: 0.7478442}
+      - {x: -2.534327, y: 0.33715963}
+      - {x: -2.46308, y: 0.34271193}
+      - {x: -2.4555402, y: 0.16870594}
+      - {x: -2.125381, y: 0.16822577}
+      - {x: -2.1205487, y: 0.08703995}
+      - {x: -2.0405812, y: 0.08453035}
+      - {x: -2.0372083, y: -0.009054661}
+      - {x: -1.6272447, y: -0.0023217201}
+      - {x: 1.2899318, y: -0.0010972023}
+      - {x: 2.294694, y: -0.0010972023}
+      - {x: 2.2928667, y: 0.16745138}
+      - {x: 2.3750505, y: 0.16767597}
+      - {x: 2.3754964, y: 0.25019646}
+      - {x: 2.4583378, y: 0.2507453}
+      - {x: 2.4621372, y: 0.33358765}
+      - {x: 2.5283296, y: 0.33396402}
+      - {x: 2.540665, y: 0.74784374}
+  m_UseDelaunayMesh: 0
