@@ -99,9 +99,9 @@ public class PlayerController : MonoBehaviour
                 // JumpAction using Mouse Left Click
                 if (Input.GetMouseButton(0))
                 {
+                    // transform.SetParent(null);
                     if (IsGroundedX())
                     {
-                        Debug.Log("Here");
                         //Click to charge
                         jumpForce.Value += 0.1f * Time.deltaTime * 600;
                         // Debug.Log("Charge" + " " + jumpForce);
@@ -114,7 +114,7 @@ public class PlayerController : MonoBehaviour
                     {
                         // if canDoubleJump, jump where mouse is (use all maxJumpForce fuel)
                         if (canDoubleJump && !IsGrounded && Input.GetMouseButton(0))
-                        {Debug.Log("Here2");
+                        {
                             //Play jump audio here
                             playerAudio.PlayOneShot(jumpSound);
                             if (fuel.Value < 20f)
@@ -136,7 +136,7 @@ public class PlayerController : MonoBehaviour
                 }
                 //Release to jump
                 if (Input.GetMouseButtonUp(0) && IsGroundedX())
-                {Debug.Log("Here3");
+                {
                     // Fix Moving Platform Bug
                     transform.SetParent(null);
                     //Play jump audio here
@@ -239,7 +239,7 @@ public class PlayerController : MonoBehaviour
             boxCollider2D.bounds.size,
             0,
             Vector2.down,
-            0.1f,
+            .1f,
             jumpableGround
         );
         return raycastHit.collider != null;
@@ -256,6 +256,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        Debug.Log("Grounded? " + IsGroundedX());
         if (collision.contacts.Length > 0)
         {
             ContactPoint2D contact = collision.GetContact(0);

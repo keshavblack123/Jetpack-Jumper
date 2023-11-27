@@ -32,15 +32,13 @@ public class AnimationManager : MonoBehaviour
     {
         MovementState state;
 
-        Debug.Log("Animation: update -> Idle");
         state = MovementState.idle;
 
-        if(state == MovementState.idle && Input.GetMouseButton(0))
+        if (state == MovementState.idle && Input.GetMouseButton(0))
         {
             state = MovementState.charge;
-            Debug.Log("Animation: update -> Charge");
         }
-        else if (rb.velocity.y > 0.1f) 
+        else if (rb.velocity.y > 0.1f)
         {
             state = MovementState.jump;
         }
@@ -48,11 +46,11 @@ public class AnimationManager : MonoBehaviour
         {
             state = MovementState.fall;
         }
-        
+
 
         playerAnimation.SetInteger("state", (int)state);
 
 
-     
+
     }
 }
