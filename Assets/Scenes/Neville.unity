@@ -9782,6 +9782,134 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8280400804518212190, guid: f3a21b69250268443bae7fdefcbe33c0, type: 3}
+      propertyPath: gradient.key0.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8280400804518212190, guid: f3a21b69250268443bae7fdefcbe33c0, type: 3}
+      propertyPath: gradient.key0.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8280400804518212190, guid: f3a21b69250268443bae7fdefcbe33c0, type: 3}
+      propertyPath: gradient.key0.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8280400804518212190, guid: f3a21b69250268443bae7fdefcbe33c0, type: 3}
+      propertyPath: gradient.key1.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8280400804518212190, guid: f3a21b69250268443bae7fdefcbe33c0, type: 3}
+      propertyPath: gradient.key1.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8280400804518212190, guid: f3a21b69250268443bae7fdefcbe33c0, type: 3}
+      propertyPath: gradient.key1.r
+      value: 0.12316179
+      objectReference: {fileID: 0}
+    - target: {fileID: 8280400804518212190, guid: f3a21b69250268443bae7fdefcbe33c0, type: 3}
+      propertyPath: gradient.m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8280400804518212190, guid: f3a21b69250268443bae7fdefcbe33c0, type: 3}
+      propertyPath: colorGradient.ctime1
+      value: 42212
+      objectReference: {fileID: 0}
+    - target: {fileID: 8280400804518212190, guid: f3a21b69250268443bae7fdefcbe33c0, type: 3}
+      propertyPath: colorGradient.ctime2
+      value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 8280400804518212190, guid: f3a21b69250268443bae7fdefcbe33c0, type: 3}
+      propertyPath: colorGradient.key0.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8280400804518212190, guid: f3a21b69250268443bae7fdefcbe33c0, type: 3}
+      propertyPath: colorGradient.key0.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8280400804518212190, guid: f3a21b69250268443bae7fdefcbe33c0, type: 3}
+      propertyPath: colorGradient.key0.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8280400804518212190, guid: f3a21b69250268443bae7fdefcbe33c0, type: 3}
+      propertyPath: colorGradient.key1.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8280400804518212190, guid: f3a21b69250268443bae7fdefcbe33c0, type: 3}
+      propertyPath: colorGradient.key1.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8280400804518212190, guid: f3a21b69250268443bae7fdefcbe33c0, type: 3}
+      propertyPath: colorGradient.key1.r
+      value: 0.99053574
+      objectReference: {fileID: 0}
+    - target: {fileID: 8280400804518212190, guid: f3a21b69250268443bae7fdefcbe33c0, type: 3}
+      propertyPath: colorGradient.key2.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8280400804518212190, guid: f3a21b69250268443bae7fdefcbe33c0, type: 3}
+      propertyPath: colorGradient.key2.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8280400804518212190, guid: f3a21b69250268443bae7fdefcbe33c0, type: 3}
+      propertyPath: colorGradient.m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8280400804518212190, guid: f3a21b69250268443bae7fdefcbe33c0, type: 3}
+      propertyPath: endColorGradient.key0.b
+      value: 0.88663435
+      objectReference: {fileID: 0}
+    - target: {fileID: 8280400804518212190, guid: f3a21b69250268443bae7fdefcbe33c0, type: 3}
+      propertyPath: endColorGradient.key0.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8280400804518212190, guid: f3a21b69250268443bae7fdefcbe33c0, type: 3}
+      propertyPath: endColorGradient.key0.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8280400804518212190, guid: f3a21b69250268443bae7fdefcbe33c0, type: 3}
+      propertyPath: endColorGradient.key1.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8280400804518212190, guid: f3a21b69250268443bae7fdefcbe33c0, type: 3}
+      propertyPath: endColorGradient.key1.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8280400804518212190, guid: f3a21b69250268443bae7fdefcbe33c0, type: 3}
+      propertyPath: endColorGradient.key1.r
+      value: 0.15111566
+      objectReference: {fileID: 0}
+    - target: {fileID: 8280400804518212190, guid: f3a21b69250268443bae7fdefcbe33c0, type: 3}
+      propertyPath: endColorGradient.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8280400804518212190, guid: f3a21b69250268443bae7fdefcbe33c0, type: 3}
+      propertyPath: startColorGradient.key0.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8280400804518212190, guid: f3a21b69250268443bae7fdefcbe33c0, type: 3}
+      propertyPath: startColorGradient.key0.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8280400804518212190, guid: f3a21b69250268443bae7fdefcbe33c0, type: 3}
+      propertyPath: startColorGradient.key1.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8280400804518212190, guid: f3a21b69250268443bae7fdefcbe33c0, type: 3}
+      propertyPath: startColorGradient.key1.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8280400804518212190, guid: f3a21b69250268443bae7fdefcbe33c0, type: 3}
+      propertyPath: startColorGradient.key1.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8280400804518212190, guid: f3a21b69250268443bae7fdefcbe33c0, type: 3}
+      propertyPath: startColorGradient.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8280400804518212190, guid: f3a21b69250268443bae7fdefcbe33c0, type: 3}
+      propertyPath: colorGradient.m_NumColorKeys
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

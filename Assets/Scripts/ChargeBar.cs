@@ -3,8 +3,14 @@ using UnityEngine;
 public class ChargeBar : MonoBehaviour
 {
     private SpriteRenderer chargeBarSprite;
+
     public Color fullChargeColor = Color.green;
     public Color emptyChargeColor = Color.red;
+
+    public Gradient colorGradient;
+
+    public Gradient startColorGradient;
+    public Gradient endColorGradient;
 
     public GameConstants gameConstant;
     public FloatVariable jumpForce;
@@ -26,7 +32,13 @@ public class ChargeBar : MonoBehaviour
             (jumpForce.Value - gameConstant.startingJumpForce)
             / (30f - gameConstant.startingJumpForce)
             * initialScaleX;
-        chargeBarSprite.color = Color.Lerp(emptyChargeColor, fullChargeColor, fillAmount);
+        //chargeBarSprite.color = Color.Lerp(emptyChargeColor, fullChargeColor, fillAmount / initialScaleX); // between 2 colors
+        //chargeBarSprite.color = colorGradient.Evaluate(fillAmount / initialScaleX); // only 1 gradient
+        Color startColor = startColorGradient.Evaluate(fillAmount / initialScaleX);
+        Color endColor = endColorGradient.Evaluate(fillAmount / initialScaleX);
+
+        // Use Color.Lerp to blend between the start and end colors
+        chargeBarSprite.color = Color.Lerp(startColor, endColor, fillAmount);
 
         // Sprite only expands to the right
         chargeBarSprite.transform.localScale = new Vector3(
