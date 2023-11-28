@@ -195,11 +195,15 @@ public class PlayerController : MonoBehaviour
 
             if (mouseDirection.x > 0)
             {
-                sprite.flipX = true;
+                //sprite.flipX = true;
+                transform.localScale = new Vector3(-1, 1, 1);
+                GameObject.Find("Anchor Point").transform.localScale = new Vector3(-1, 1, 1);
             }
             else
             {
-                sprite.flipX = false;
+                //sprite.flipX = false;
+                transform.localScale = new Vector3(1, 1, 1);
+                GameObject.Find("Anchor Point").transform.localScale = new Vector3(1, 1, 1);
             }
         }
     }

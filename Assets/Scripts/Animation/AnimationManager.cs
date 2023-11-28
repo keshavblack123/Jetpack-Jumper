@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class AnimationManager : MonoBehaviour
 {
+    public GameObject[] FireParticlesPrefab;
+
     private Animator playerAnimation;
     private Rigidbody2D rb;
 
@@ -34,11 +37,11 @@ public class AnimationManager : MonoBehaviour
 
         state = MovementState.idle;
 
-        if (state == MovementState.idle && Input.GetMouseButton(0))
+        if (rb.velocity.y <= 0.1f && Input.GetMouseButton(0))
         {
             state = MovementState.charge;
         }
-        else if (rb.velocity.y > 0.1f)
+        else if (rb.velocity.y > 0.1f && !Input.GetMouseButton(0))
         {
             state = MovementState.jump;
         }
@@ -47,10 +50,20 @@ public class AnimationManager : MonoBehaviour
             state = MovementState.fall;
         }
 
-
         playerAnimation.SetInteger("state", (int)state);
+    }
 
+    private void SpawnFireParticles()
+    {
+        foreach (GameObject prefab in FireParticlesPrefab)
+        {
+            GameObject spawnedObject = Instantiate(prefab);
+            
+            // Player Leave Trails
+            // spawnedObject.transform.position = GameObject.Find("FireSpawnPoint").transform.position;
 
-
+            spawnedObject.transform.SetParent(GameObject.Find("FireSpawnPoint").transform);
+            spawnedObject.transform.localPosition = Vector3.zero;
+        }
     }
 }
