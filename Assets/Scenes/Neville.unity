@@ -9688,11 +9688,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4801888920974699358, guid: f3a21b69250268443bae7fdefcbe33c0, type: 3}
       propertyPath: m_Size.y
-      value: 1.5364083
+      value: 1.4810847
       objectReference: {fileID: 0}
     - target: {fileID: 4801888920974699358, guid: f3a21b69250268443bae7fdefcbe33c0, type: 3}
       propertyPath: m_Offset.y
-      value: -0.05955714
+      value: -0.03189534
       objectReference: {fileID: 0}
     - target: {fileID: 7896665330391910466, guid: f3a21b69250268443bae7fdefcbe33c0, type: 3}
       propertyPath: m_Name
