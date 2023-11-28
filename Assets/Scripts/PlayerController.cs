@@ -111,20 +111,20 @@ public class PlayerController : MonoBehaviour
                         // if canDoubleJump, jump where mouse is (use all maxJumpForce fuel)
                         if (canDoubleJump)
                         {
-                            //StartCoroutine(PerformDoubleJump());
-                            if (fuel.Value < 20f)
-                            {
-                                jumpForce.Value = fuel.Value;
-                            }
-                            else
-                            {
-                                jumpForce.Value = 20f;
-                            }
-                            fuelDrain(jumpForce.Value);
-                            Jump();
-                            jumpForce.SetValue(5f);
-                            delay = delayTime;
-                            canDoubleJump = false;
+                            StartCoroutine(PerformDoubleJump());
+                            // if (fuel.Value < 20f)
+                            // {
+                            //     jumpForce.Value = fuel.Value;
+                            // }
+                            // else
+                            // {
+                            //     jumpForce.Value = 20f;
+                            // }
+                            // fuelDrain(jumpForce.Value);
+                            // Jump();
+                            // jumpForce.SetValue(5f);
+                            // delay = delayTime;
+                            // canDoubleJump = false;
                         }
                     }
                 }
