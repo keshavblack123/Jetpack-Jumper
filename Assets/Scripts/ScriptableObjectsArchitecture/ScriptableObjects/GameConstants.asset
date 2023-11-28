@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 986bd8facb947dd4daa87a7e92eda224, type: 3}
   m_Name: GameConstants
   m_EditorClassIdentifier: 
-  startingJumpForce: 10
+  startingJumpForce: 5
   startingFuel: 100
   delayTime: 5
   maxFuel: 100

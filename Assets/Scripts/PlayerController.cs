@@ -68,8 +68,6 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(rb.velocity.x);
-
         rb.velocity = new Vector2(
             Mathf.Clamp(rb.velocity.x, -maxFuel / 2, maxFuel / 2),
             rb.velocity.y
@@ -258,7 +256,6 @@ public class PlayerController : MonoBehaviour
     // Ground Check
     private void OnCollisionStay2D(Collision2D collision)
     {
-        Debug.Log("Grounded? " + IsGrounded);
         bool isContactFromBelow = false;
 
         foreach (ContactPoint2D contact in collision.contacts)
@@ -271,8 +268,6 @@ public class PlayerController : MonoBehaviour
         }
         bool isGroundCollision = collision.gameObject.layer == LayerMask.NameToLayer("Ground");
         IsGrounded = isContactFromBelow && isGroundCollision;
-
-        Debug.Log("Grounded? " + IsGrounded);
     }
 
     void OnCollisionExit2D(Collision2D collision)
