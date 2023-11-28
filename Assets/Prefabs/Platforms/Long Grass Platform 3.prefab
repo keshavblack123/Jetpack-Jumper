@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6530275338275452709}
   - component: {fileID: 4580680174302650830}
   - component: {fileID: 8463081018321430198}
+  - component: {fileID: 7219511016650360355}
   m_Layer: 6
   m_Name: Long Grass Platform 3
   m_TagString: Ground
@@ -92,7 +93,7 @@ PolygonCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7912164079337574740}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -143,10 +144,10 @@ PolygonCollider2D:
       - {x: 3.2381115, y: 0.42097506}
       - {x: 3.2349648, y: 0.6655668}
       - {x: 1.0337455, y: 0.66282606}
-      - {x: -3.1586313, y: 0.66361046}
-      - {x: -3.1530387, y: 0.41128254}
-      - {x: -3.2532742, y: 0.41128445}
-      - {x: -3.248668, y: 0.089113}
+      - {x: -3.1686113, y: 0.66735315}
+      - {x: -3.1692564, y: 0.5160732}
+      - {x: -3.1680124, y: 0.41843176}
+      - {x: -3.1688392, y: 0.25269985}
       - {x: -3.1691453, y: 0.08235121}
       - {x: -3.168772, y: -0.0068621635}
       - {x: -3.0886397, y: -0.0022422671}
@@ -158,3 +159,48 @@ PolygonCollider2D:
       - {x: 0, y: -0.16733712}
       - {x: 2.7547555, y: -0.16451249}
   m_UseDelaunayMesh: 0
+--- !u!61 &7219511016650360355
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7912164079337574740}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.027328968, y: 0.25507045}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 6.5, y: 2.5}
+    newSize: {x: 3.8671875, y: 3.8671875}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 6.372464, y: 0.7873845}
+  m_EdgeRadius: 0

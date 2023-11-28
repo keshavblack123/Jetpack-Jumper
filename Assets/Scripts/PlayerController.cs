@@ -5,13 +5,13 @@ using TMPro;
 using UnityEditor.Timeline;
 using Unity.Mathematics;
 using System.Data.Common;
+using System;
 
 public class PlayerController : MonoBehaviour
 {
     public GameConstants gameConstants;
     private Rigidbody2D rb;
     private SpriteRenderer sprite;
-    private BoxCollider2D boxCollider2D;
 
     private Vector3 mouseDirection;
 
@@ -58,33 +58,35 @@ public class PlayerController : MonoBehaviour
 
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
-        boxCollider2D = GetComponent<BoxCollider2D>();
         playerAudio = GetComponent<AudioSource>();
 
         fuel.SetValue(maxFuel);
         maxJumpForce = 30f;
-        // fuelIncrement = 0.05f;
         dragValue = 30f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y);
+        Debug.Log(rb.velocity.x);
+
+        rb.velocity = new Vector2(
+            Mathf.Clamp(rb.velocity.x, -maxFuel / 2, maxFuel / 2),
+            rb.velocity.y
+        );
         mouseDirection = getCursorLocation();
 
+        Cursor.SetCursor(
+            mouseDirection.y < -0.05 ? null : customCursor,
+            Vector2.zero,
+            CursorMode.Auto
+        );
+
         //Temp Fix to prevent sliding
-        if (IsGroundedX())
+        if (IsGrounded)
         {
             canDoubleJump = true;
-            if (!Input.GetMouseButton(0))
-            {
-                rb.drag = dragValue;
-            }
-            else
-            {
-                rb.drag = 0f;
-            }
+            rb.drag = Input.GetMouseButton(0) ? 0f : dragValue;
         }
         else
         {
@@ -92,19 +94,15 @@ public class PlayerController : MonoBehaviour
         }
         if (mouseDirection.y < -0.05)
         {
-            Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
-
             if (fuel.Value >= 0)
             {
                 // JumpAction using Mouse Left Click
                 if (Input.GetMouseButton(0))
                 {
-                    // transform.SetParent(null);
-                    if (IsGroundedX())
+                    if (IsGrounded)
                     {
                         //Click to charge
                         jumpForce.Value += 0.1f * Time.deltaTime * 600;
-                        // Debug.Log("Charge" + " " + jumpForce);
                         if (jumpForce.Value > maxJumpForce)
                         {
                             jumpForce.SetValue(maxJumpForce);
@@ -113,20 +111,18 @@ public class PlayerController : MonoBehaviour
                     else
                     {
                         // if canDoubleJump, jump where mouse is (use all maxJumpForce fuel)
-                        if (canDoubleJump && !IsGrounded && Input.GetMouseButton(0))
+                        if (canDoubleJump)
                         {
-                            //Play jump audio here
-                            playerAudio.PlayOneShot(jumpSound);
+                            //StartCoroutine(PerformDoubleJump());
                             if (fuel.Value < 20f)
                             {
                                 jumpForce.Value = fuel.Value;
-                                fuelDrain(jumpForce.Value);
                             }
                             else
                             {
                                 jumpForce.Value = 20f;
-                                fuelDrain(jumpForce.Value);
                             }
+                            fuelDrain(jumpForce.Value);
                             Jump();
                             jumpForce.SetValue(5f);
                             delay = delayTime;
@@ -135,12 +131,10 @@ public class PlayerController : MonoBehaviour
                     }
                 }
                 //Release to jump
-                if (Input.GetMouseButtonUp(0) && IsGroundedX())
+                if (Input.GetMouseButtonUp(0) && IsGrounded)
                 {
                     // Fix Moving Platform Bug
                     transform.SetParent(null);
-                    //Play jump audio here
-                    playerAudio.PlayOneShot(jumpSound);
                     if (jumpForce.Value < fuel.Value)
                     {
                         Jump();
@@ -157,14 +151,9 @@ public class PlayerController : MonoBehaviour
                     delay = delayTime;
                 }
             }
-            else
-            {
-                Cursor.SetCursor(customCursor, Vector2.zero, CursorMode.Auto);
-            }
             // Refuel on the ground after a delay
-            if (IsGroundedX() && fuel.Value >= 0)
+            if (IsGrounded && fuel.Value >= 0)
             {
-                // Refuel after a delay on the ground
                 if (fuel.Value < maxFuel)
                 {
                     if (delay > 0)
@@ -198,6 +187,8 @@ public class PlayerController : MonoBehaviour
         // If mouse is below the player
         if (mouseDirection.y < -0.05)
         {
+            //Play jump audio here
+            playerAudio.PlayOneShot(jumpSound);
             //Unfreeze player Set back rotation constraint
             rb.constraints = RigidbodyConstraints2D.None;
             rb.constraints = RigidbodyConstraints2D.FreezeRotation;
@@ -232,19 +223,6 @@ public class PlayerController : MonoBehaviour
         jumpForce.SetValue(gameConstants.startingJumpForce);
     }
 
-    public bool IsGroundedX()
-    {
-        RaycastHit2D raycastHit = Physics2D.BoxCast(
-            boxCollider2D.bounds.center,
-            boxCollider2D.bounds.size,
-            0,
-            Vector2.down,
-            .1f,
-            jumpableGround
-        );
-        return raycastHit.collider != null;
-    }
-
     private void spawnGroundParticles()
     {
         GameObject instantiatedPrefab = Instantiate(groundParticlePrefab);
@@ -254,9 +232,9 @@ public class PlayerController : MonoBehaviour
         ;
     }
 
+    // Particles and Sound Effect
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Grounded? " + IsGroundedX());
         if (collision.contacts.Length > 0)
         {
             ContactPoint2D contact = collision.GetContact(0);
@@ -268,14 +246,49 @@ public class PlayerController : MonoBehaviour
             )
             {
                 spawnGroundParticles();
-                // Play land on platform sound
                 playerAudio.PlayOneShot(landOnPlatformSound);
-                IsGrounded = true;
             }
         }
         if (collision.gameObject.CompareTag("Limits"))
         {
             playerAudio.PlayOneShot(hitSideWall);
         }
+    }
+
+    // Ground Check
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        Debug.Log("Grounded? " + IsGrounded);
+        bool isContactFromBelow = false;
+
+        foreach (ContactPoint2D contact in collision.contacts)
+        {
+            if (contact.normal == Vector2.up)
+            {
+                isContactFromBelow = true;
+                break;
+            }
+        }
+        bool isGroundCollision = collision.gameObject.layer == LayerMask.NameToLayer("Ground");
+        IsGrounded = isContactFromBelow && isGroundCollision;
+
+        Debug.Log("Grounded? " + IsGrounded);
+    }
+
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        IsGrounded = false;
+    }
+
+    IEnumerator PerformDoubleJump()
+    {
+        float desiredJumpForce = Mathf.Min(fuel.Value, 20f);
+        jumpForce.Value = desiredJumpForce;
+        fuelDrain(jumpForce.Value);
+        Jump();
+        yield return null; // Wait for the next frame
+        jumpForce.SetValue(5f);
+        delay = delayTime;
+        canDoubleJump = false;
     }
 }
