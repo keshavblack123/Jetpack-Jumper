@@ -205,7 +205,7 @@ public class PlayerController : MonoBehaviour
                 //sprite.flipX = false;
                 transform.localScale = new Vector3(1, 1, 1);
                 GameObject.Find("Anchor Point").transform.localScale = new Vector3(1, 1, 1);
-                GameObject.Find("ChargeBar").transform.localScale = new Vector3(-1, 1, 1);
+                GameObject.Find("ChargeBar").transform.localScale = new Vector3(1, 1, 1);
             }
         }
     }
