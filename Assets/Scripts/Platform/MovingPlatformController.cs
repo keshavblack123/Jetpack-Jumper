@@ -8,6 +8,7 @@ public class MovingPlatformController : MonoBehaviour
     private int currentWaypointIndex = 0;
     public float speed = 2f;
     Vector3 parentStartingPosition;
+
     void Start()
     {
         parentStartingPosition = transform.parent.position;
@@ -42,6 +43,7 @@ public class MovingPlatformController : MonoBehaviour
 
             if (collision.bounds.min.y > triggerBounds.max.y)
             {
+                Debug.Log(collision.gameObject.name);
                 collision.gameObject.transform.SetParent(transform);
             }
         }
