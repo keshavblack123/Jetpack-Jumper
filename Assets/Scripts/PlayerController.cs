@@ -21,9 +21,12 @@ public class PlayerController : MonoBehaviour
     float maxFuel;
     LayerMask jumpableGround;
     AudioSource playerAudio;
-    public AudioClip jumpSound;
+    private AudioClip jumpSound;
+    public AudioClip singleJump;
+    public AudioClip doubleJump;
     public AudioClip landOnPlatformSound;
     public AudioClip hitSideWall;
+    public AudioClip refuelAudio;
 
     private float delay;
     public bool IsGrounded = true;
@@ -131,6 +134,8 @@ public class PlayerController : MonoBehaviour
                 //Release to jump
                 if (Input.GetMouseButtonUp(0) && IsGrounded)
                 {
+                    //Set jumpSound to SingleJump
+                    jumpSound = singleJump;
                     // Fix Moving Platform Bug
                     transform.SetParent(null);
                     if (jumpForce.Value < fuel.Value)
@@ -177,6 +182,7 @@ public class PlayerController : MonoBehaviour
 
     public void refuel()
     {
+        playerAudio.PlayOneShot(refuelAudio);
         fuel.ApplyChange(fuelIncrement * Time.deltaTime * 500);
     }
 
@@ -283,6 +289,8 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator PerformDoubleJump()
     {
+        //Set jumpSound to doubleJump
+        jumpSound = doubleJump;
         float desiredJumpForce = Mathf.Min(fuel.Value, 20f);
         jumpForce.Value = desiredJumpForce;
         fuelDrain(jumpForce.Value);

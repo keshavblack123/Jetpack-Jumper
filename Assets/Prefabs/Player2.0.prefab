@@ -647,9 +647,11 @@ MonoBehaviour:
   gameConstants: {fileID: 11400000, guid: d8f22cdab1547be40a3f4a20fd0fa9ce, type: 2}
   fuel: {fileID: 11400000, guid: 3089af160a9027e4d9522616191969ee, type: 2}
   jumpForce: {fileID: 11400000, guid: 50935c7acd85fd9488c9f6722bdd9dfa, type: 2}
-  jumpSound: {fileID: 8300000, guid: 6b7620d7bd26a448ba48286f78d3d634, type: 3}
+  singleJump: {fileID: 8300000, guid: a4d68018358284e8f9881334e8aef7f2, type: 3}
+  doubleJump: {fileID: 8300000, guid: 8caad3bfceeea4bd5bbf31cb5049e385, type: 3}
   landOnPlatformSound: {fileID: 8300000, guid: ac1be29b0bf1046c19a8f951339131d7, type: 3}
   hitSideWall: {fileID: 8300000, guid: 4a5138b9f6aed44b5943fd0d1b61d21a, type: 3}
+  refuelAudio: {fileID: 8300000, guid: cdf0001d7675640fabfa159353c621c2, type: 3}
   IsGrounded: 1
   customCursor: {fileID: 2800000, guid: 72cf6994cca7ef34385f5c5ce573cdbb, type: 3}
   groundParticlePrefab: {fileID: 1758741067633491097, guid: b1d4fb5a55dfa4b4993410227b9a2456, type: 3}
