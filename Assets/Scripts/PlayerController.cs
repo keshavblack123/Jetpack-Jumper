@@ -1,11 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
-using UnityEditor.Timeline;
-using Unity.Mathematics;
-using System.Data.Common;
-using System;
 
 public class PlayerController : MonoBehaviour
 {
@@ -19,7 +13,6 @@ public class PlayerController : MonoBehaviour
     public FloatVariable jumpForce;
     float delayTime;
     float maxFuel;
-    LayerMask jumpableGround;
     AudioSource playerAudio;
 
     private float delay;
@@ -58,7 +51,6 @@ public class PlayerController : MonoBehaviour
         jumpForce.SetValue(gameConstants.startingJumpForce);
         delayTime = gameConstants.delayTime;
         maxFuel = gameConstants.maxFuel;
-        jumpableGround = gameConstants.jumpableGround;
         fuelIncrement = gameConstants.fuelIncrement;
 
         startingPosition = transform.position;

@@ -24,6 +24,22 @@ public class IndicatorController : MonoBehaviour
         if (rotationZ > 0.05)
         {
             transform.rotation = Quaternion.Euler(0, 0, rotationZ);
+            if (rotationZ >= 90)
+            {
+                transform.localScale = new Vector3(
+                    transform.localScale.x,
+                    -1,
+                    transform.localScale.z
+                );
+            }
+            else
+            {
+                transform.localScale = new Vector3(
+                    transform.localScale.x,
+                    1,
+                    transform.localScale.z
+                );
+            }
         }
     }
 }
