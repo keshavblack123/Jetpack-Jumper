@@ -651,7 +651,7 @@ MonoBehaviour:
   doubleJump: {fileID: 8300000, guid: 8caad3bfceeea4bd5bbf31cb5049e385, type: 3}
   landOnPlatformSound: {fileID: 8300000, guid: ac1be29b0bf1046c19a8f951339131d7, type: 3}
   hitSideWall: {fileID: 8300000, guid: 4a5138b9f6aed44b5943fd0d1b61d21a, type: 3}
-  refuelAudio: {fileID: 8300000, guid: cdf0001d7675640fabfa159353c621c2, type: 3}
+  refuelAudio: {fileID: 8300000, guid: dd25190e024c849068ad712c6783cefd, type: 3}
   IsGrounded: 1
   customCursor: {fileID: 2800000, guid: 72cf6994cca7ef34385f5c5ce573cdbb, type: 3}
   groundParticlePrefab: {fileID: 1758741067633491097, guid: b1d4fb5a55dfa4b4993410227b9a2456, type: 3}

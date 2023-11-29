@@ -21,12 +21,6 @@ public class PlayerController : MonoBehaviour
     float maxFuel;
     LayerMask jumpableGround;
     AudioSource playerAudio;
-    private AudioClip jumpSound;
-    public AudioClip singleJump;
-    public AudioClip doubleJump;
-    public AudioClip landOnPlatformSound;
-    public AudioClip hitSideWall;
-    public AudioClip refuelAudio;
 
     private float delay;
     public bool IsGrounded = true;
@@ -48,6 +42,15 @@ public class PlayerController : MonoBehaviour
     public float dragValue = 30f;
     Vector3 startingPosition;
     private bool canDoubleJump = true;
+
+    [Header("Audio Clips")]
+    public AudioClip singleJump;
+    public AudioClip doubleJump;
+    public AudioClip landOnPlatformSound;
+    public AudioClip hitSideWall;
+    public AudioClip refuelAudio;
+    private AudioClip jumpSound;
+
 
     void Start()
     {
