@@ -23,7 +23,9 @@ public class PlayerController : MonoBehaviour
     AudioSource playerAudio;
 
     private float delay;
-    public bool IsGrounded = true;
+    private bool IsGrounded = true;
+    public float speedLimitX;
+    public float speedLimitY;
 
     [Header("Game Objects")]
     // public TextMeshProUGUI jumpText;
@@ -74,8 +76,8 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         rb.velocity = new Vector2(
-            Mathf.Clamp(rb.velocity.x, -maxFuel / 2, maxFuel / 2),
-            rb.velocity.y
+            Mathf.Clamp(rb.velocity.x, -speedLimitX, speedLimitX),
+            Mathf.Clamp(rb.velocity.y, -speedLimitY, speedLimitY)
         );
         mouseDirection = getCursorLocation();
 
