@@ -51,7 +51,6 @@ public class PlayerController : MonoBehaviour
     public AudioClip refuelAudio;
     private AudioClip jumpSound;
 
-
     void Start()
     {
         jumpForce.SetValue(gameConstants.startingJumpForce);
@@ -207,14 +206,14 @@ public class PlayerController : MonoBehaviour
                 //sprite.flipX = true;
                 transform.localScale = new Vector3(-1, 1, 1);
                 GameObject.Find("Anchor Point").transform.localScale = new Vector3(-1, 1, 1);
-                GameObject.Find("ChargeBar").transform.localScale = new Vector3(-1, 1, 1);
+                //GameObject.Find("ChargeBar").transform.localScale = new Vector3(-1, 1, 1);
             }
             else
             {
                 //sprite.flipX = false;
                 transform.localScale = new Vector3(1, 1, 1);
                 GameObject.Find("Anchor Point").transform.localScale = new Vector3(1, 1, 1);
-                GameObject.Find("ChargeBar").transform.localScale = new Vector3(1, 1, 1);
+                //GameObject.Find("ChargeBar").transform.localScale = new Vector3(1, 1, 1);
             }
         }
     }
@@ -294,7 +293,7 @@ public class PlayerController : MonoBehaviour
     {
         //Set jumpSound to doubleJump
         jumpSound = doubleJump;
-        float desiredJumpForce = Mathf.Min(fuel.Value, 20f);
+        float desiredJumpForce = Mathf.Min(fuel.Value, 12.5f);
         jumpForce.Value = desiredJumpForce;
         fuelDrain(jumpForce.Value);
         Jump();

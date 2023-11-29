@@ -47,7 +47,8 @@ public class ChargeBar : MonoBehaviour
             transform.localScale.z
         );
         // Calc new position for the sprite so it "stays" in place
-        float newX = -(initialScaleX - fillAmount) * 0.5f + initialPosX;
+        float newX = initialPosX + (fillAmount - initialScaleX) * 0.5f;
+
         chargeBarSprite.transform.localPosition = new Vector3(
             newX,
             transform.localPosition.y,
