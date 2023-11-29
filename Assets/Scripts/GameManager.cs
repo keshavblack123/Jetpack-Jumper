@@ -7,18 +7,17 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        Application.targetFrameRate = 60;
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() { }
 
-    }
     public void PauseGame()
     {
         Time.timeScale = 0.0f;
     }
+
     public void ResumeGame()
     {
         Time.timeScale = 1.0f;
