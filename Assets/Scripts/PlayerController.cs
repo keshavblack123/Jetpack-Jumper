@@ -273,7 +273,6 @@ public class PlayerController : MonoBehaviour
             }
         }
         bool isGroundCollision = collision.gameObject.layer == LayerMask.NameToLayer("Ground");
-        Debug.Log(isContactFromBelow);
         IsGrounded = isContactFromBelow && isGroundCollision;
     }
 
