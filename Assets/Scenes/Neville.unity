@@ -7417,6 +7417,7 @@ GameObject:
   - component: {fileID: 1335198539}
   - component: {fileID: 1335198540}
   - component: {fileID: 1335198541}
+  - component: {fileID: 1335198542}
   m_Layer: 6
   m_Name: Ground
   m_TagString: Ground
@@ -7536,6 +7537,33 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 68.07088, y: 2.5908217}
   m_EdgeRadius: 0
+--- !u!50 &1335198542
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1335198538}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 6200000, guid: 0b0a9eec87407dc4e9ec26c7f8ad6a64, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!4 &1336832076 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6530275338275452709, guid: d29efef7f0f0a2f49b866c341febe9be, type: 3}
@@ -11357,6 +11385,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -1484894243, guid: 886065e504733254ab4b948ae1a84557, type: 3}
+    - target: {fileID: 6255098274112705628, guid: f3a21b69250268443bae7fdefcbe33c0, type: 3}
+      propertyPath: dragValue
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7748965441368330944, guid: f3a21b69250268443bae7fdefcbe33c0, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.31
@@ -11367,11 +11399,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8025564374870027398, guid: f3a21b69250268443bae7fdefcbe33c0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.36
+      value: -7.46
       objectReference: {fileID: 0}
     - target: {fileID: 8025564374870027398, guid: f3a21b69250268443bae7fdefcbe33c0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 63.24
+      value: 2.38
       objectReference: {fileID: 0}
     - target: {fileID: 8025564374870027398, guid: f3a21b69250268443bae7fdefcbe33c0, type: 3}
       propertyPath: m_LocalPosition.z

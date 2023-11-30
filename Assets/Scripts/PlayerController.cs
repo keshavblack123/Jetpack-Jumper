@@ -59,7 +59,7 @@ public class PlayerController : MonoBehaviour
 
         fuel.SetValue(maxFuel);
         maxJumpForce = 30f;
-        dragValue = 30f;
+        dragValue = 0f;
     }
 
     // Update is called once per frame
