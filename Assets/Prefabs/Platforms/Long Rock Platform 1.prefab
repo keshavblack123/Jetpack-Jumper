@@ -90,13 +90,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7912164079337574740, guid: 7627431e393e2440b9cfe9a58eb50af2, type: 3}
       propertyPath: m_Name
-      value: Long Platform (5) Variant
+      value: Long Rock Platform 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114418345532554793, guid: 7627431e393e2440b9cfe9a58eb50af2, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7912164079337574740, guid: 7627431e393e2440b9cfe9a58eb50af2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1319278731799421698}
     - targetCorrespondingSourceObject: {fileID: 7912164079337574740, guid: 7627431e393e2440b9cfe9a58eb50af2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4246665073845741968}
@@ -106,6 +109,51 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7912164079337574740, guid: 7627431e393e2440b9cfe9a58eb50af2, type: 3}
   m_PrefabInstance: {fileID: 1410072269193572857}
   m_PrefabAsset: {fileID: 0}
+--- !u!61 &1319278731799421698
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9105207579149918381}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.729826}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.0833335, y: 1.5833334}
+    newSize: {x: 3.8671875, y: 3.8671875}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.0833335, y: 0.22552109}
+  m_EdgeRadius: 0
 --- !u!60 &4246665073845741968
 PolygonCollider2D:
   m_ObjectHideFlags: 0

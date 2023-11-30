@@ -266,13 +266,14 @@ public class PlayerController : MonoBehaviour
 
         foreach (ContactPoint2D contact in collision.contacts)
         {
-            if (contact.normal == Vector2.up)
+            if (Vector2.Angle(contact.normal, Vector2.up) < 45f)
             {
                 isContactFromBelow = true;
                 break;
             }
         }
         bool isGroundCollision = collision.gameObject.layer == LayerMask.NameToLayer("Ground");
+        Debug.Log(isContactFromBelow);
         IsGrounded = isContactFromBelow && isGroundCollision;
     }
 
