@@ -4,25 +4,12 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public GameConstants gameConstants;
-    private Rigidbody2D rb;
-    private SpriteRenderer sprite;
-
-    private Vector3 mouseDirection;
-
     public FloatVariable fuel;
     public FloatVariable jumpForce;
-    float delayTime;
-    float maxFuel;
-    AudioSource playerAudio;
-
-    private float delay;
-    private bool IsGrounded = true;
     public float speedLimitX;
     public float speedLimitY;
 
     [Header("Game Objects")]
-    // public TextMeshProUGUI jumpText;
-    // public TextMeshProUGUI fuelText;
     public Texture2D customCursor;
     public GameObject groundParticlePrefab;
 
@@ -35,8 +22,6 @@ public class PlayerController : MonoBehaviour
 
     [Tooltip("Default Value is 30")]
     public float dragValue = 30f;
-    Vector3 startingPosition;
-    private bool canDoubleJump = true;
 
     [Header("Audio Clips")]
     public AudioClip singleJump;
@@ -45,6 +30,19 @@ public class PlayerController : MonoBehaviour
     public AudioClip hitSideWall;
     public AudioClip refuelAudio;
     private AudioClip jumpSound;
+    AudioSource playerAudio;
+
+    Vector3 startingPosition;
+
+    private Rigidbody2D rb;
+    private SpriteRenderer sprite;
+    private Vector3 mouseDirection;
+
+    private bool canDoubleJump = true;
+    private float delay;
+    private float delayTime;
+    private float maxFuel;
+    private bool IsGrounded = true;
 
     void Start()
     {

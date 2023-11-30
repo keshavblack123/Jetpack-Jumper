@@ -49,7 +49,10 @@ public class AnimationManager : MonoBehaviour
         {
             state = MovementState.fall;
         }
-
+        if (rb.velocity.y > 0.1f)
+        {
+            SpawnFireParticles();
+        }
         playerAnimation.SetInteger("state", (int)state);
     }
 
@@ -58,7 +61,7 @@ public class AnimationManager : MonoBehaviour
         foreach (GameObject prefab in FireParticlesPrefab)
         {
             GameObject spawnedObject = Instantiate(prefab);
-            
+
             // Player Leave Trails
             // spawnedObject.transform.position = GameObject.Find("FireSpawnPoint").transform.position;
 
