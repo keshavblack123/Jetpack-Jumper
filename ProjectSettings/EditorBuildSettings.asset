@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Neville.unity
     guid: 1b44ddfc9613dd14c8a6cefae4353121
+  - enabled: 1
+    path: Assets/Scenes/End Menu.unity
+    guid: 1563a96320325724fae0aee8458ca65a
   m_configObjects: {}
