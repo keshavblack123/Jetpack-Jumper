@@ -5882,8 +5882,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeText: {fileID: 8761588153576116373}
   targetVignetteIntensity: 1
-  delayBeforeLoading: 5
-  vignetteChangeDuration: 3
+  delayBeforeLoading: 1
+  vignetteChangeDuration: 1
   postProcessVolume: {fileID: 1720459940}
   TimerObject: {fileID: 6401800347666477821}
 --- !u!1 &1009601804
@@ -11843,11 +11843,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8025564374870027398, guid: f3a21b69250268443bae7fdefcbe33c0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.29
+      value: -10.09
       objectReference: {fileID: 0}
     - target: {fileID: 8025564374870027398, guid: f3a21b69250268443bae7fdefcbe33c0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.34
+      value: 2.36
       objectReference: {fileID: 0}
     - target: {fileID: 8025564374870027398, guid: f3a21b69250268443bae7fdefcbe33c0, type: 3}
       propertyPath: m_LocalPosition.z
