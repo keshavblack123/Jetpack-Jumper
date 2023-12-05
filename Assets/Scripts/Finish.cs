@@ -18,7 +18,7 @@ public class Finish : MonoBehaviour
     private Vignette vignette;
 
     public GameObject TimerObject;
-    public GameObject Player;
+    public GameObject player;
 
     // Start is called before the first frame update
     void Start()
@@ -34,10 +34,6 @@ public class Finish : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             TimerObject.GetComponent<TimerController>().timerStops = true;
-
-            Player.GetComponent<PlayerController>().enabled = false;
-            Player.GetComponentInChildren<IndicatorController>().enabled=false;
-
             if (PlayerPrefs.GetString("FastestTime") != "")
             {
                 float currentTime = ConvertToSeconds(timeText.text);
@@ -47,12 +43,23 @@ public class Finish : MonoBehaviour
                     PlayerPrefs.SetString("FastestTime", timeText.text);
                 }
             }
-            else{
+            else
+            {
                 PlayerPrefs.SetString("FastestTime", timeText.text);
             }
             PlayerPrefs.SetString("Time", timeText.text);
             StartCoroutine(LoadSceneWithGradualVignette(2));
             //SceneManager.LoadSceneAsync(2);
+        }
+    }
+
+    void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+            player.GetComponent<PlayerController>().enabled = false;
+            player.GetComponentInChildren<IndicatorController>().enabled = false;
         }
     }
 
