@@ -35,8 +35,8 @@ public class Finish : MonoBehaviour
         {
             TimerObject.GetComponent<TimerController>().timerStops = true;
 
-            GetComponent<PlayerController>().enabled = false;
-            GetComponentInChildren<IndicatorController>().enabled=false;
+            Player.GetComponent<PlayerController>().enabled = false;
+            Player.GetComponentInChildren<IndicatorController>().enabled=false;
 
             if (PlayerPrefs.GetString("FastestTime") != "")
             {
