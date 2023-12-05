@@ -5881,6 +5881,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeText: {fileID: 8761588153576116373}
+  targetVignetteIntensity: 1
+  delayBeforeLoading: 5
+  vignetteChangeDuration: 3
+  postProcessVolume: {fileID: 1720459940}
+  TimerObject: {fileID: 6401800347666477821}
 --- !u!1 &1009601804
 GameObject:
   m_ObjectHideFlags: 0
@@ -11838,11 +11843,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8025564374870027398, guid: f3a21b69250268443bae7fdefcbe33c0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.15
+      value: -9.29
       objectReference: {fileID: 0}
     - target: {fileID: 8025564374870027398, guid: f3a21b69250268443bae7fdefcbe33c0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.74
+      value: 2.34
       objectReference: {fileID: 0}
     - target: {fileID: 8025564374870027398, guid: f3a21b69250268443bae7fdefcbe33c0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -12114,6 +12119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a005b406e3a1d1549bfc59ca46177687, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerStops: 0
 --- !u!223 &5689979367819043927
 Canvas:
   m_ObjectHideFlags: 0

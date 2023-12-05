@@ -9,21 +9,18 @@ public class FastestTime : MonoBehaviour
 
     void Start()
     {
-        if (PlayerPrefs.HasKey("FastestTime"))
-        {
-            fastestTime = PlayerPrefs.GetString("FastestTime");
-        }
-        else
-        {
-            string defaultFastestTime = "00:00:00";
-            PlayerPrefs.SetString("FastestTime", defaultFastestTime);
-            PlayerPrefs.Save();
-        }
+        
+        fastestTime = PlayerPrefs.GetString("FastestTime");
+        Debug.Log(fastestTime);
+        
     }
 
     // Update is called once per frame
     void Update()
-    {
-        GetComponent<TextMeshProUGUI>().text = fastestTime;
+    {   if (fastestTime==""){
+
+    }
+    else{
+        GetComponent<TextMeshProUGUI>().text = fastestTime;}
     }
 }

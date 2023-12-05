@@ -9,6 +9,7 @@ public class TimerController : MonoBehaviour
 
     private float time;
     private bool timerStarts;
+    public bool timerStops=false;
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +27,10 @@ public class TimerController : MonoBehaviour
 
         if (timerStarts)
         {
-            time += Time.deltaTime;
+            if (!timerStops)
+            {
+                time += Time.deltaTime;
+            }
 
             int minutes = Mathf.FloorToInt(time / 60F);
             int seconds = Mathf.FloorToInt(time - minutes * 60);
