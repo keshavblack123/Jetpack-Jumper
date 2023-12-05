@@ -16,6 +16,6 @@ public class YourTime : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.GetComponent<TextMeshProUGUI>().text = time;
+        GetComponent<TextMeshProUGUI>().text = time;
     }
 }
