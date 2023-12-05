@@ -62,3 +62,6 @@ TagManager:
   - name: Player
     uniqueID: 2806487723
     locked: 0
+  - name: Metal platforms
+    uniqueID: 1144858545
+    locked: 0
