@@ -7,6 +7,11 @@ public class MainMenu : MonoBehaviour
 {
     public AudioSource mainMenuAudio;
 
+    void Update()
+    {
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+    }
+
     public void PlayGame()
     {
         StartCoroutine(AudioController.StartFade(mainMenuAudio, 1, 0));
