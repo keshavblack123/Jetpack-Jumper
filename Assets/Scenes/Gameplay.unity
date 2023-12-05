@@ -5886,6 +5886,7 @@ MonoBehaviour:
   vignetteChangeDuration: 1
   postProcessVolume: {fileID: 1720459940}
   TimerObject: {fileID: 6401800347666477821}
+  Player: {fileID: 1955038560}
 --- !u!1 &1009601804
 GameObject:
   m_ObjectHideFlags: 0

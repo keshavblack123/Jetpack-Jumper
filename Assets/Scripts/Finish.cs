@@ -18,6 +18,7 @@ public class Finish : MonoBehaviour
     private Vignette vignette;
 
     public GameObject TimerObject;
+    public GameObject Player;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +34,9 @@ public class Finish : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             TimerObject.GetComponent<TimerController>().timerStops = true;
+
+            GetComponent<PlayerController>().enabled = false;
+            GetComponentInChildren<IndicatorController>().enabled=false;
 
             if (PlayerPrefs.GetString("FastestTime") != "")
             {
