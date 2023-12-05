@@ -12146,6 +12146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftLimit: -11.1
   rightLimit: 11.1
+  topLimit: 144
   smoothTime: 0.125
 --- !u!114 &8761588153576116373
 MonoBehaviour:

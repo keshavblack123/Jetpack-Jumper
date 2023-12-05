@@ -29,6 +29,7 @@ public class CameraController : MonoBehaviour
     private Transform player;
     public float leftLimit;
     public float rightLimit;
+    public float topLimit;
 
     private Vector3 offset = new Vector3(0f, 0f, -10f);
     public float smoothTime = 0.125f;
@@ -44,7 +45,7 @@ public class CameraController : MonoBehaviour
     void Update()
     {
         Vector3 targetPosition = player.position + offset;
-        targetPosition.y = Mathf.Clamp(targetPosition.y, 5f, Mathf.Infinity);
+        targetPosition.y = Mathf.Clamp(targetPosition.y, 5f, topLimit);
 
         targetPosition.x = Mathf.Clamp(targetPosition.x, leftLimit, rightLimit);
 
